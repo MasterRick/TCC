@@ -1,0 +1,45 @@
+# Como Rodar a Aplicação Python com `venv`
+
+## Pré-requisitos
+
+- Python 3.x instalado ([download aqui](https://www.python.org/downloads/))
+
+## Passos
+
+1. **Clone o repositório**
+    ```bash
+    git clone <URL-do-repositório>
+    cd IA-DEEPSEEK
+    ```
+
+2. **Crie o ambiente virtual**
+    ```bash
+    python -m venv IA-Deepseek
+    ```
+
+3. **Ative o ambiente virtual**
+
+    - **Windows:**
+      ```bash
+      venv\Scripts\activate
+      ```
+    - **Linux/Mac:**
+      ```bash
+      source venv/bin/activate
+      ```
+
+4. **Instale as dependências**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+5. **Execute a aplicação**
+    ```bash
+    python main.py
+    ```
+
+## Observações
+
+- Para sair do ambiente virtual, use `deactivate`.
+- Certifique-se de que o arquivo `requirements.txt` está atualizado.
+- Consulte a documentação do projeto para mais detalhes.
