@@ -1,0 +1,164 @@
+=== RESULTADOS D1 a D5 ===
+**Questão Dissertativa para o 3º Ano do Ensino Médio - Descritor D1 (Espaço e Forma)**  
+
+**Enunciado:**  
+Um triângulo retângulo possui catetos medindo 6 cm e 8 cm. Determine a medida da altura relativa à hipotenusa e assinale a alternativa correta.  
+
+**Alternativas:**  
+A) 4,2 cm  
+B) 4,8 cm *(Correta)*  
+C) 5,0 cm  
+D) 5,5 cm  
+E) 6,0 cm  
+
+---  
+
+**Justificativa:**  
+Para resolver, primeiro calcula-se a hipotenusa pelo Teorema de Pitágoras:  
+\( h = \sqrt{6^2 + 8^2} = 10 \text{ cm} \).  
+A área do triângulo pode ser calculada por \( \frac{6 \times 8}{2} = 24 \text{ cm}^2 \).  
+Usando a mesma área em relação à hipotenusa: \( \frac{10 \times \text{altura}}{2} = 24 \), logo, a altura é \( \frac{24 \times 2}{10} = 4,8 \text{ cm} \).  
+
+---  
+
+**Questão Dissertativa para o 3º Ano do Ensino Médio - Descritor D16 (Números e Operações/Álgebra e Funções)**  
+
+**Enunciado:**  
+Uma loja oferece um desconto de 25% no preço de um produto que custa R$ 200,00. Se o cliente pagar à vista, recebe mais 10% de desconto sobre o valor já descontado. Qual o preço final à vista?  
+
+**Alternativas:**  
+A) R$ 130,00  
+B) R$ 135,00 *(Correta)*  
+C) R$ 140,00  
+D) R$ 145,00  
+E) R$ 150,00  
+
+---  
+
+**Justificativa:**  
+1º desconto (25%): \( 200 \times 0,75 = 150 \text{ reais} \).  
+2º desconto (10% sobre R$ 150): \( 150 \times 0,90 = 135 \text{ reais} \).  
+
+---  
+
+**Questão Dissertativa para o 3º Ano do Ensino Médio - Descritor D20 (Números e Operações/Álgebra e Funções)**  
+
+**Enunciado:**  
+Qual é o valor de \( x \) na equação exponencial \( 3^{x+2} = 81 \)?  
+
+**Alternativas:**  
+A) 0  
+B) 1  
+C) 2 *(Correta)*  
+D) 3  
+E) 4  
+
+---  
+
+**Justificativa:**  
+Como \( 81 = 3^4 \), temos \( 3^{x+2} = 3^4 \). Portanto, \( x+2 = 4 \), logo \( x = 2 \).  
+
+---  
+
+**Questão Dissertativa para o 3º Ano do Ensino Médio - Descritor D28 (Números e Operações/Álgebra e Funções)**  
+
+**Enunciado:**  
+Se \( \log_{2} (x) = 3 \), qual é o valor de \( x \)?  
+
+**Alternativas:**  
+A) 6  
+B) 8 *(Correta)*  
+C) 9  
+D) 10  
+E) 12  
+
+---  
+
+**Justificativa:**  
+Por definição de logaritmo, \( \log_{2} (x) = 3 \) implica \( x = 2^3 = 8 \).  
+
+---  
+
+**Questão Dissertativa para o 3º Ano do Ensino Médio - Descritor D33 (Tratamento da Informação)**  
+
+**Enunciado:**  
+Em uma urna há 5 bolas vermelhas, 3 bolas azuis e 2 bolas verdes. Qual a probabilidade de se retirar uma bola azul ou verde?  
+
+**Alternativas:**  
+A) \( \frac{1}{2} \) *(Correta)*  
+B) \( \frac{1}{3} \)  
+C) \( \frac{2}{5} \)  
+D) \( \frac{3}{10} \)  
+E) \( \frac{4}{5} \)  
+
+---  
+
+**Justificativa:**  
+Total de bolas: \( 5 + 3 + 2 = 10 \).  
+Bolas favoráveis (azuis + verdes): \( 3 + 2 = 5 \).  
+Probabilidade: \( \frac{5}{10} = \frac{1}{2} \).  
+
+---  
+
+Cada questão aborda um descritor específico, com alternativas plausíveis para testar o raciocínio e conceitos matemáticos essenciais.
+
+=== RESULTADOS D6 a D10 ===
+Aqui está uma questão dissertativa baseada nos descritores D6 a D10 da Matriz de Referência de Matemática para a 3ª série do Ensino Médio, com cinco alternativas (sendo uma correta e quatro incorretas) por descritor:
+
+---
+
+### **Questão Dissertativa – Descritores D6 a D10**  
+
+**Contexto:** Uma empresa de logística precisa otimizar o transporte de mercadorias entre dois depósitos, A e B, localizados em um plano cartesiano. O depósito A está no ponto (2, 3), e o depósito B está no ponto (8, 7). A empresa deseja determinar:  
+
+1. **A distância em linha reta entre A e B (D6).**  
+2. **A equação da reta que passa por A e B (D7).**  
+3. **O ponto de interseção dessa reta com o eixo x (D9).**  
+4. **Se a equação da circunferência com centro em A e raio 5 pode representar a área de cobertura do depósito A (D10).**  
+
+**Com base nisso, responda:**  
+
+#### **Descritor D6 – Reconhecer aplicações das relações métricas do triângulo retângulo**  
+**Qual é a distância entre os depósitos A e B?**  
+a) 10 unidades. *(Incorreta: não aplica corretamente a fórmula da distância.)*  
+b) \( \sqrt{52} \) unidades. *(Correta: calculada usando \( \sqrt{(8-2)^2 + (7-3)^2} \).)*  
+c) 8 unidades. *(Incorreta: ignora a componente vertical da distância.)*  
+d) \( \sqrt{40} \) unidades. *(Incorreta: erro ao elevar os termos ao quadrado.)*  
+e) 6 unidades. *(Incorreta: considera apenas a diferença das abscissas.)*  
+
+#### **Descritor D7 – Identificar a equação de uma reta**  
+**Qual é a equação da reta que passa por A e B?**  
+a) \( y = \frac{2}{3}x + 1 \). *(Incorreta: coeficiente angular calculado incorretamente.)*  
+b) \( y = \frac{2}{3}x + \frac{5}{3} \). *(Correta: coeficiente angular \( \frac{7-3}{8-2} = \frac{2}{3} \) e ponto A para encontrar o termo independente.)*  
+c) \( y = 3x - 3 \). *(Incorreta: não passa pelos pontos dados.)*  
+d) \( y = -\frac{2}{3}x + 5 \). *(Incorreta: sinal do coeficiente angular errado.)*  
+e) \( x + y = 5 \). *(Incorreta: não representa a reta crescente entre A e B.)*  
+
+#### **Descritor D8 – Relacionar ponto de interseção com resolução de sistemas**  
+**Em qual ponto a reta AB intercepta o eixo x?**  
+a) \( (-\frac{5}{2}, 0) \). *(Correta: resolve \( 0 = \frac{2}{3}x + \frac{5}{3} \).)*  
+b) \( (0, \frac{5}{3}) \). *(Incorreta: é o intercepto no eixo y.)*  
+c) \( (5, 0) \). *(Incorreta: erro ao isolar x.)*  
+d) \( (2, 0) \). *(Incorreta: confunde com a abscissa de A.)*  
+e) \( (-3, 0) \). *(Incorreta: cálculo incorreto do intercepto.)*  
+
+#### **Descritor D9 – Reconhecer equações de circunferências**  
+**A equação \( (x-2)^2 + (y-3)^2 = 25 \) representa a área de cobertura do depósito A?**  
+a) Sim, pois descreve uma circunferência de raio 5 e centro em (2, 3). *(Correta: segue a forma padrão \( (x-h)^2 + (y-k)^2 = r^2 \).)*  
+b) Não, pois o raio deveria ser 10. *(Incorreta: confunde raio com diâmetro.)*  
+c) Sim, mas o centro está em (3, 2). *(Incorreta: inverte as coordenadas do centro.)*  
+d) Não, pois a equação representa uma reta. *(Incorreta: não reconhece a forma da circunferência.)*  
+e) Sim, mas o raio é \( \sqrt{5} \). *(Incorreta: erro na interpretação do raio.)*  
+
+#### **Descritor D10 – Resolver problemas com funções**  
+**Se um caminhão parte de A e se move ao longo da reta AB a 2 unidades de distância por minuto, quanto tempo leva para chegar a B?**  
+a) 26 minutos. *(Incorreta: usa a soma das coordenadas.)*  
+b) 3,6 minutos. *(Correta: \( \frac{\sqrt{52}}{2} \approx 3,6 \).)*  
+c) 5 minutos. *(Incorreta: considera a média das coordenadas.)*  
+d) 10 minutos. *(Incorreta: usa a distância sem dividir pela velocidade.)*  
+e) 7,2 minutos. *(Incorreta: dobra o tempo correto.)*  
+
+---
+
+**Observação:** Cada descritor foi abordado com alternativas plausíveis, mas apenas uma correta, seguindo os objetivos de aprendizagem da matriz. A questão integra geometria analítica, álgebra e aplicações práticas, alinhando-se às competências do SAEB.
+

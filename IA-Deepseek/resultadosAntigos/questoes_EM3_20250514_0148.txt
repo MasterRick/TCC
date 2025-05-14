@@ -1,0 +1,538 @@
+=== RELATÓRIO GERADO EM: 2025-05-14 01:48:42 ===
+
+=== DESCRITORES D1-D5 ===
+INICIO-D1  
+1. Descritor: D1  
+2. Questão: Um triângulo ABC possui lados medindo 3 cm, 4 cm e 5 cm. Um outro triângulo DEF possui lados medindo 6 cm, 8 cm e 10 cm. Com base nisso, é correto afirmar que:  
+3. Alternativas:  
+A) Os triângulos são congruentes.  
+B) Os triângulos são semelhantes, pois seus lados correspondentes são proporcionais.  
+C) Os triângulos não são semelhantes, pois possuem ângulos diferentes.  
+D) Apenas os ângulos dos triângulos são proporcionais.  
+E) Não há relação entre os triângulos.  
+4. Resposta correta: B  
+5. Justificativa: Os triângulos são semelhantes porque seus lados correspondentes são proporcionais (razão 2:1) e, consequentemente, seus ângulos são iguais.  
+FIM-D1  
+
+---  
+
+INICIO-D2  
+1. Descritor: D2  
+2. Questão: Uma escada de 5 metros está apoiada em uma parede, formando um triângulo retângulo com o chão. Se a base da escada está a 3 metros da parede, qual é a altura alcançada pela escada?  
+3. Alternativas:  
+A) 2 metros  
+B) 3 metros  
+C) 4 metros  
+D) 5 metros  
+E) 6 metros  
+4. Resposta correta: C  
+5. Justificativa: Aplicando o Teorema de Pitágoras (5² = 3² + h²), temos h = 4 metros.  
+FIM-D2  
+
+---  
+
+INICIO-D3  
+1. Descritor: D3  
+2. Questão: Qual das planificações abaixo corresponde a um cubo?  
+3. Alternativas:  
+A) Um hexágono regular.  
+B) Seis quadrados dispostos em forma de cruz.  
+C) Quatro triângulos equiláteros.  
+D) Um retângulo com dois círculos nas extremidades.  
+E) Três retângulos e dois triângulos.  
+4. Resposta correta: B  
+5. Justificativa: O cubo possui 6 faces quadradas, e sua planificação clássica é formada por seis quadrados dispostos em cruz.  
+FIM-D3  
+
+---  
+
+INICIO-D4  
+1. Descritor: D4  
+2. Questão: Dado o sistema de equações:  
+   \[  
+   \begin{cases}  
+   x + y = 5 \\  
+   2x - y = 4  
+   \end{cases}  
+   \]  
+   Qual é o ponto de interseção das retas que representam esse sistema?  
+3. Alternativas:  
+A) (2, 3)  
+B) (3, 2)  
+C) (1, 4)  
+D) (4, 1)  
+E) (0, 5)  
+4. Resposta correta: B  
+5. Justificativa: Resolvendo o sistema, encontramos x = 3 e y = 2, que é o ponto de interseção.  
+FIM-D4  
+
+---  
+
+INICIO-D5  
+1. Descritor: D5  
+2. Questão: Em um triângulo retângulo, um dos ângulos agudos mede 30° e o cateto adjacente a esse ângulo mede 6 cm. Qual é o comprimento da hipotenusa?  
+3. Alternativas:  
+A) 3 cm  
+B) 6 cm  
+C) 6√3 cm  
+D) 12 cm  
+E) 4√3 cm  
+4. Resposta correta: E  
+5. Justificativa: Usando a relação trigonométrica cosseno (cos 30° = cateto adjacente/hipotenusa), temos √3/2 = 6/h, logo h = 4√3 cm.  
+FIM-D5
+
+=== DESCRITORES D6-D10 ===
+INICIO-D6  
+1. Descritor: D6  
+2. Questão: No plano cartesiano, qual é a localização do ponto P(3, -2)?  
+3. Alternativas:  
+A) 3 unidades à direita da origem e 2 unidades acima do eixo x.  
+B) 3 unidades à esquerda da origem e 2 unidades abaixo do eixo x.  
+C) 3 unidades à direita da origem e 2 unidades abaixo do eixo x.  
+D) 3 unidades acima do eixo x e 2 unidades à esquerda da origem.  
+E) 3 unidades abaixo do eixo x e 2 unidades à direita da origem.  
+4. Resposta correta: C  
+5. Justificativa: No plano cartesiano, o primeiro valor do par ordenado (3) indica a distância horizontal (direita se positivo) e o segundo valor (-2) indica a distância vertical (abaixo se negativo).  
+FIM-D6  
+
+INICIO-D7  
+1. Descritor: D7  
+2. Questão: Qual é o significado geométrico do coeficiente angular (m) na equação da reta y = mx + b?  
+3. Alternativas:  
+A) Representa o ponto onde a reta intercepta o eixo y.  
+B) Indica a inclinação da reta em relação ao eixo x.  
+C) Mostra a distância da reta até a origem.  
+D) Define o ponto de interseção da reta com o eixo x.  
+E) Representa o comprimento da reta no plano cartesiano.  
+4. Resposta correta: B  
+5. Justificativa: O coeficiente angular (m) determina a inclinação da reta, ou seja, a tangente do ângulo que a reta forma com o eixo x.  
+FIM-D7  
+
+INICIO-D8  
+1. Descritor: D8  
+2. Questão: Qual é a equação da reta que passa pelos pontos A(1, 2) e B(3, 8)?  
+3. Alternativas:  
+A) y = 2x  
+B) y = 3x - 1  
+C) y = 4x - 2  
+D) y = x + 1  
+E) y = -x + 3  
+4. Resposta correta: B  
+5. Justificativa: Calculando o coeficiente angular (m = (8-2)/(3-1) = 3) e usando o ponto A na equação y - y1 = m(x - x1), obtém-se y = 3x - 1.  
+FIM-D8  
+
+INICIO-D9  
+1. Descritor: D9  
+2. Questão: Qual é o ponto de interseção das retas y = 2x + 1 e y = -x + 4?  
+3. Alternativas:  
+A) (1, 3)  
+B) (2, 5)  
+C) (0, 1)  
+D) (3, 7)  
+E) (-1, 5)  
+4. Resposta correta: A  
+5. Justificativa: Resolvendo o sistema 2x + 1 = -x + 4, obtém-se x = 1 e y = 3, resultando no ponto (1, 3).  
+FIM-D9  
+
+INICIO-D10  
+1. Descritor: D10  
+2. Questão: Qual das equações abaixo representa uma circunferência?  
+3. Alternativas:  
+A) x² + y² = 9  
+B) x² - y² = 4  
+C) y = 2x + 3  
+D) x² + y = 1  
+E) xy = 6  
+4. Resposta correta: A  
+5. Justificativa: A equação x² + y² = 9 está na forma padrão de uma circunferência (x² + y² = r²), com raio 3.  
+FIM-D10
+
+=== DESCRITORES D11-D15 ===
+INICIO-D11  
+1. Descritor: D11  
+2. Questão: Um terreno retangular tem comprimento igual a 25 metros e largura igual a 12 metros. Qual é o perímetro desse terreno?  
+3. Alternativas:  
+A) 37 metros  
+B) 50 metros  
+C) 74 metros  
+D) 100 metros  
+E) 300 metros  
+4. Resposta correta: C  
+5. Justificativa: O perímetro de um retângulo é calculado pela fórmula P = 2*(comprimento + largura). Assim, P = 2*(25 + 12) = 2*37 = 74 metros.  
+FIM-D11  
+
+INICIO-D12  
+1. Descritor: D12  
+2. Questão: Uma praça circular tem raio de 10 metros. Qual é a área dessa praça? (Use π = 3,14)  
+3. Alternativas:  
+A) 31,4 m²  
+B) 62,8 m²  
+C) 314 m²  
+D) 628 m²  
+E) 1256 m²  
+4. Resposta correta: C  
+5. Justificativa: A área de um círculo é calculada pela fórmula A = π*r². Assim, A = 3,14*(10)² = 3,14*100 = 314 m².  
+FIM-D12  
+
+INICIO-D13  
+1. Descritor: D13  
+2. Questão: Um cilindro tem raio da base igual a 4 cm e altura igual a 10 cm. Qual é o volume desse cilindro? (Use π = 3,14)  
+3. Alternativas:  
+A) 125,6 cm³  
+B) 251,2 cm³  
+C) 502,4 cm³  
+D) 753,6 cm³  
+E) 1004,8 cm³  
+4. Resposta correta: C  
+5. Justificativa: O volume de um cilindro é calculado pela fórmula V = π*r²*h. Assim, V = 3,14*(4)²*10 = 3,14*16*10 = 502,4 cm³.  
+FIM-D13  
+
+INICIO-D14  
+1. Descritor: D14  
+2. Questão: Em qual posição da reta numérica está localizado o número real √9?  
+3. Alternativas:  
+A) Entre 2 e 3  
+B) Entre 3 e 4  
+C) No ponto 3  
+D) No ponto 4  
+E) Entre 1 e 2  
+4. Resposta correta: C  
+5. Justificativa: √9 = 3, portanto, o número está localizado exatamente no ponto 3 da reta numérica.  
+FIM-D14  
+
+INICIO-D15  
+1. Descritor: D15  
+2. Questão: Se 5 operários constroem um muro em 10 dias, quantos dias serão necessários para 10 operários construírem o mesmo muro, considerando a mesma eficiência?  
+3. Alternativas:  
+A) 2 dias  
+B) 5 dias  
+C) 10 dias  
+D) 15 dias  
+E) 20 dias  
+4. Resposta correta: B  
+5. Justificativa: Trata-se de uma proporção inversa. Se o número de operários dobra, o tempo necessário é reduzido pela metade. Assim, 10 operários levarão 5 dias.  
+FIM-D15
+
+=== DESCRITORES D16-D20 ===
+INICIO-D16  
+1. Descritor: D16  
+2. Questão: Uma loja oferece um desconto de 25% em um produto que custa R$ 400,00. Qual é o valor final do produto após o desconto?  
+3. Alternativas:  
+A) R$ 100,00  
+B) R$ 300,00  
+C) R$ 350,00  
+D) R$ 375,00  
+E) R$ 425,00  
+4. Resposta correta: B  
+5. Justificativa: O desconto de 25% sobre R$ 400,00 equivale a R$ 100,00. Subtraindo esse valor do preço original, obtém-se R$ 300,00.  
+FIM-D16  
+
+INICIO-D17  
+1. Descritor: D17  
+2. Questão: Qual é a solução da equação x² - 5x + 6 = 0?  
+3. Alternativas:  
+A) x = 1 e x = 6  
+B) x = 2 e x = 3  
+C) x = -2 e x = -3  
+D) x = 0 e x = 5  
+E) x = 1 e x = -6  
+4. Resposta correta: B  
+5. Justificativa: A equação pode ser fatorada como (x - 2)(x - 3) = 0, resultando nas raízes x = 2 e x = 3.  
+FIM-D17  
+
+INICIO-D18  
+1. Descritor: D18  
+2. Questão: Dada a tabela abaixo, qual expressão algébrica representa a função y em relação a x?  
+
+|x | y |  
+|--|---|  
+|1 | 3 |  
+|2 | 5 |  
+|3 | 7 |  
+
+3. Alternativas:  
+A) y = x + 1  
+B) y = 2x + 1  
+C) y = 3x  
+D) y = x²  
+E) y = x - 2  
+4. Resposta correta: B  
+5. Justificativa: A função y = 2x + 1 satisfaz todos os pares (x, y) da tabela.  
+FIM-D18  
+
+INICIO-D19  
+1. Descritor: D19  
+2. Questão: Uma função do 1º grau é dada por f(x) = -2x + 4. Qual é o valor de f(3)?  
+3. Alternativas:  
+A) 10  
+B) 2  
+C) -2  
+D) -10  
+E) 0  
+4. Resposta correta: C  
+5. Justificativa: Substituindo x = 3 na função, temos f(3) = -2(3) + 4 = -6 + 4 = -2.  
+FIM-D19  
+
+INICIO-D20  
+1. Descritor: D20  
+2. Questão: Analisando o gráfico de uma função real, observa-se que ela é crescente para x < 2 e decrescente para x > 2. Qual é o zero dessa função?  
+3. Alternativas:  
+A) x = 0  
+B) x = 2  
+C) x = 4  
+D) x = -2  
+E) x = 1  
+4. Resposta correta: B  
+5. Justificativa: O zero da função é o ponto onde ela intercepta o eixo x, que coincide com o ponto de mudança de crescimento para decrescimento (x = 2).  
+FIM-D20
+
+=== DESCRITORES D21-D25 ===
+INICIO-D21  
+1. Descritor: D21  
+2. Questão: Um objeto é lançado verticalmente para cima, e sua altura (h) em metros, em relação ao tempo (t) em segundos, é descrita pela função h(t) = -5t² + 20t. Qual dos gráficos abaixo melhor representa a trajetória do objeto?  
+3. Alternativas:  
+A) Uma reta crescente.  
+B) Uma reta decrescente.  
+C) Uma parábola com concavidade para cima, iniciando na origem.  
+D) Uma parábola com concavidade para baixo, atingindo um ponto máximo e depois decrescendo.  
+E) Uma curva exponencial crescente.  
+4. Resposta correta: D  
+5. Justificativa: A função h(t) = -5t² + 20t é uma quadrática com coeficiente negativo, gerando uma parábola com concavidade para baixo, que atinge um ponto máximo (vértice) e depois decresce.  
+FIM-D21  
+
+---  
+
+INICIO-D22  
+1. Descritor: D22  
+2. Questão: Em uma Progressão Aritmética (P.A.), o primeiro termo é 3 e a razão é 5. Qual é o valor do 10º termo dessa P.A.?  
+3. Alternativas:  
+A) 48  
+B) 50  
+C) 53  
+D) 55  
+E) 58  
+4. Resposta correta: A  
+5. Justificativa: Usando a fórmula do termo geral da P.A. (aₙ = a₁ + (n-1)r), temos: a₁₀ = 3 + (10-1)*5 = 3 + 45 = 48.  
+FIM-D22  
+
+---  
+
+INICIO-D23  
+1. Descritor: D23  
+2. Questão: Qual dos gráficos abaixo representa a função f(x) = 2x - 4?  
+3. Alternativas:  
+A) Uma reta crescente que intercepta o eixo y em (0, -4).  
+B) Uma reta decrescente que intercepta o eixo y em (0, 4).  
+C) Uma parábola com vértice em (0, -4).  
+D) Uma curva exponencial crescente.  
+E) Uma reta horizontal que intercepta o eixo y em (0, 2).  
+4. Resposta correta: A  
+5. Justificativa: A função f(x) = 2x - 4 é linear (1º grau), com coeficiente angular positivo (reta crescente) e coeficiente linear -4 (intercepta y em (0, -4)).  
+FIM-D23  
+
+---  
+
+INICIO-D24  
+1. Descritor: D24  
+2. Questão: Dado o gráfico de uma reta que passa pelos pontos (0, 3) e (2, 7), qual é a representação algébrica da função correspondente?  
+3. Alternativas:  
+A) f(x) = x + 3  
+B) f(x) = 2x + 3  
+C) f(x) = -x + 3  
+D) f(x) = 3x + 2  
+E) f(x) = 4x - 1  
+4. Resposta correta: B  
+5. Justificativa: O coeficiente linear (b) é 3 (ponto (0,3)), e o angular (a) é (7-3)/(2-0) = 2. Logo, a função é f(x) = 2x + 3.  
+FIM-D24  
+
+---  
+
+INICIO-D25  
+1. Descritor: D25  
+2. Questão: A função f(x) = -x² + 6x - 5 tem um ponto de máximo ou mínimo. Qual é o valor de x nesse ponto?  
+3. Alternativas:  
+A) 1  
+B) 2  
+C) 3  
+D) 4  
+E) 5  
+4. Resposta correta: C  
+5. Justificativa: O vértice de f(x) = ax² + bx + c ocorre em x = -b/(2a). Aqui, x = -6/(2*-1) = 3. Como a < 0, é um ponto de máximo.  
+FIM-D25
+
+=== DESCRITORES D26-D30 ===
+INICIO-D26  
+1. Descritor: D26  
+2. Questão: Considere o polinômio \( P(x) = x^3 - 6x^2 + 11x - 6 \). Sabendo que suas raízes são 1, 2 e 3, como esse polinômio pode ser decomposto em fatores do 1º grau?  
+3. Alternativas:  
+A) \( (x - 1)(x - 2)(x - 3) \)  
+B) \( (x + 1)(x + 2)(x + 3) \)  
+C) \( (x - 1)(x - 2)(x + 3) \)  
+D) \( (x + 1)(x - 2)(x - 3) \)  
+E) \( (x - 1)(x + 2)(x + 3) \)  
+4. Resposta correta: A  
+5. Justificativa: Se as raízes são 1, 2 e 3, o polinômio pode ser decomposto como \( (x - 1)(x - 2)(x - 3) \), pois cada fator anula-se quando \( x \) assume o valor da raiz.  
+FIM-D26  
+
+---  
+
+INICIO-D27  
+1. Descritor: D27  
+2. Questão: Observe o gráfico de uma função exponencial que passa pelos pontos (0, 1) e (1, 2). Qual é a representação algébrica dessa função?  
+3. Alternativas:  
+A) \( f(x) = 1^x \)  
+B) \( f(x) = 2^x \)  
+C) \( f(x) = x^2 \)  
+D) \( f(x) = \log_2 x \)  
+E) \( f(x) = e^x \)  
+4. Resposta correta: B  
+5. Justificativa: A função exponencial que passa por (0, 1) e (1, 2) é \( f(x) = 2^x \), pois \( 2^0 = 1 \) e \( 2^1 = 2 \).  
+FIM-D27  
+
+---  
+
+INICIO-D28  
+1. Descritor: D28  
+2. Questão: Qual é a função inversa da função exponencial \( f(x) = 10^x \)?  
+3. Alternativas:  
+A) \( f^{-1}(x) = \ln x \)  
+B) \( f^{-1}(x) = \log_{10} x \)  
+C) \( f^{-1}(x) = x^{10} \)  
+D) \( f^{-1}(x) = e^x \)  
+E) \( f^{-1}(x) = \log_2 x \)  
+4. Resposta correta: B  
+5. Justificativa: A inversa de \( f(x) = 10^x \) é \( f^{-1}(x) = \log_{10} x \), pois \( \log_{10}(10^x) = x \).  
+FIM-D28  
+
+---  
+
+INICIO-D29  
+1. Descritor: D29  
+2. Questão: Uma população de bactérias dobra a cada 3 horas. Se inicialmente há 100 bactérias, qual será a população após 9 horas?  
+3. Alternativas:  
+A) 200  
+B) 400  
+C) 600  
+D) 800  
+E) 1000  
+4. Resposta correta: D  
+5. Justificativa: A população dobra a cada 3 horas, então em 9 horas (3 ciclos) terá dobrado 3 vezes: \( 100 \times 2^3 = 800 \).  
+FIM-D29  
+
+---  
+
+INICIO-D30  
+1. Descritor: D30  
+2. Questão: Qual das funções abaixo possui período \( 2\pi \) e valor máximo igual a 1?  
+3. Alternativas:  
+A) \( f(x) = \tan x \)  
+B) \( f(x) = \cos x \)  
+C) \( f(x) = \sin(2x) \)  
+D) \( f(x) = \cos(3x) \)  
+E) \( f(x) = \sin x + \cos x \)  
+4. Resposta correta: B  
+5. Justificativa: A função \( \cos x \) tem período \( 2\pi \) e valor máximo 1, pois sua amplitude é 1 e seu período é \( 2\pi \).  
+FIM-D30
+
+=== DESCRITORES D31-D35 ===
+INICIO-D31  
+1. Descritor: D31  
+2. Questão: Considere o sistema linear abaixo:  
+   \[  
+   \begin{cases}  
+   2x + y = 5 \\  
+   x - y = 1  
+   \end{cases}  
+   \]  
+   Qual é a solução desse sistema?  
+
+3. Alternativas:  
+   A) \( (1, 3) \)  
+   B) \( (2, 1) \)  
+   C) \( (3, -1) \)  
+   D) \( (0, 5) \)  
+   E) \( (-1, 7) \)  
+
+4. Resposta correta: B  
+5. Justificativa: Somando as duas equações, obtemos \( 3x = 6 \), logo \( x = 2 \). Substituindo \( x = 2 \) na segunda equação, temos \( 2 - y = 1 \), então \( y = 1 \). A solução é \( (2, 1) \).  
+FIM-D31  
+
+---  
+
+INICIO-D32  
+1. Descritor: D32  
+2. Questão: Uma lanchonete oferece 3 tipos de pão, 4 tipos de recheio e 2 tipos de molho. De quantas maneiras diferentes um cliente pode montar um sanduíche escolhendo um pão, um recheio e um molho?  
+
+3. Alternativas:  
+   A) 9  
+   B) 12  
+   C) 18  
+   D) 24  
+   E) 36  
+
+4. Resposta correta: D  
+5. Justificativa: Pelo princípio multiplicativo, o número de combinações é \( 3 \times 4 \times 2 = 24 \).  
+FIM-D32  
+
+---  
+
+INICIO-D33  
+1. Descritor: D33  
+2. Questão: Em uma urna há 5 bolas vermelhas, 3 bolas azuis e 2 bolas verdes. Qual é a probabilidade de sortear uma bola azul?  
+
+3. Alternativas:  
+   A) \( \frac{1}{10} \)  
+   B) \( \frac{3}{10} \)  
+   C) \( \frac{1}{2} \)  
+   D) \( \frac{2}{5} \)  
+   E) \( \frac{3}{5} \)  
+
+4. Resposta correta: B  
+5. Justificativa: A probabilidade é calculada como \( \frac{\text{número de bolas azuis}}{\text{total de bolas}} = \frac{3}{10} \).  
+FIM-D33  
+
+---  
+
+INICIO-D34  
+1. Descritor: D34  
+2. Questão: O gráfico abaixo mostra a quantidade de livros vendidos por uma livraria em 5 meses:  
+   - Janeiro: 120  
+   - Fevereiro: 150  
+   - Março: 90  
+   - Abril: 180  
+   - Maio: 60  
+   Qual foi o mês com a menor venda de livros?  
+
+3. Alternativas:  
+   A) Janeiro  
+   B) Fevereiro  
+   C) Março  
+   D) Abril  
+   E) Maio  
+
+4. Resposta correta: E  
+5. Justificativa: Maio teve apenas 60 livros vendidos, o menor valor entre os meses listados.  
+FIM-D34  
+
+---  
+
+INICIO-D35  
+1. Descritor: D35  
+2. Questão: A tabela abaixo mostra o número de alunos por turma em uma escola:  
+   - Turma A: 25 alunos  
+   - Turma B: 30 alunos  
+   - Turma C: 20 alunos  
+   - Turma D: 35 alunos  
+   Qual gráfico melhor representa esses dados?  
+
+3. Alternativas:  
+   A) Gráfico de linha com pico em Turma B  
+   B) Gráfico de barras com altura crescente: Turma C, A, B, D  
+   C) Gráfico de pizza com fatias proporcionais aos valores  
+   D) Gráfico de dispersão com pontos aleatórios  
+   E) Gráfico de área com declínio após Turma A  
+
+4. Resposta correta: C  
+5. Justificativa: O gráfico de pizza é adequado para representar proporções, como a distribuição de alunos por turma.  
+FIM-D35
+

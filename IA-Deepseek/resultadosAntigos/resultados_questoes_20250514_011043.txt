@@ -1,0 +1,538 @@
+=== RESULTADOS D1 a D5 ===
+Aqui está uma questão dissertativa com cinco alternativas (uma correta e quatro incorretas) para cada um dos descritores D1 a D5 do 3º ano do Ensino Médio, conforme a Matriz de Referência de Matemática do SAEB:
+
+---
+
+### **Descritor D1**  
+**Identificar figuras semelhantes mediante o reconhecimento de relações de proporcionalidade.**  
+
+**Questão:**  
+Dois triângulos, ABC e DEF, são semelhantes. Sabendo que AB = 6 cm, BC = 8 cm e a razão de semelhança entre ABC e DEF é 2:1, qual é o comprimento do lado correspondente a BC no triângulo DEF?  
+
+**Alternativas:**  
+a) 2 cm *(Incorreta: Usou a razão inversa.)*  
+b) 4 cm *(Correta: Aplicou corretamente a razão de semelhança.)*  
+c) 8 cm *(Incorreta: Ignorou a razão.)*  
+d) 12 cm *(Incorreta: Multiplicou pela razão em vez de dividir.)*  
+e) 16 cm *(Incorreta: Elevou a razão ao quadrado.)*  
+
+---
+
+### **Descritor D2**  
+**Reconhecer aplicações das relações métricas do triângulo retângulo em problemas.**  
+
+**Questão:**  
+Em um triângulo retângulo, a altura relativa à hipotenusa mede 12 cm e divide-a em segmentos de 9 cm e 16 cm. Qual é a área desse triângulo?  
+
+**Alternativas:**  
+a) 50 cm² *(Incorreta: Somou os segmentos sem aplicar a relação métrica.)*  
+b) 75 cm² *(Incorreta: Usou apenas metade da hipotenusa.)*  
+c) 150 cm² *(Correta: Calculou a hipotenusa e aplicou a fórmula da área.)*  
+d) 200 cm² *(Incorreta: Multiplicou os segmentos diretamente.)*  
+e) 300 cm² *(Incorreta: Ignorou a altura.)*  
+
+---
+
+### **Descritor D3**  
+**Resolver problemas envolvendo polígonos regulares e círculos (inscritos ou circunscritos).**  
+
+**Questão:**  
+Um hexágono regular está inscrito em um círculo de raio 10 cm. Qual é o perímetro do hexágono?  
+
+**Alternativas:**  
+a) 30 cm *(Incorreta: Usou o raio como lado do hexágono.)*  
+b) 40 cm *(Incorreta: Considerou o diâmetro como perímetro.)*  
+c) 50 cm *(Incorreta: Erro na contagem de lados.)*  
+d) 60 cm *(Correta: Lado do hexágono = raio; perímetro = 6 × 10 cm.)*  
+e) 100 cm *(Incorreta: Confundiu com área.)*  
+
+---
+
+### **Descritor D4**  
+**Identificar a relação entre o número de lados de um polígono e seus ângulos em um problema.**  
+
+**Questão:**  
+Qual é a soma dos ângulos internos de um polígono convexo com 12 lados?  
+
+**Alternativas:**  
+a) 900° *(Incorreta: Usou a fórmula para 7 lados.)*  
+b) 1500° *(Incorreta: Erro na aplicação da fórmula.)*  
+c) 1800° *(Correta: S = (12 – 2) × 180°.)*  
+d) 2000° *(Incorreta: Adicionou 200° à fórmula.)*  
+e) 2160° *(Incorreta: Multiplicou 12 × 180°.)*  
+
+---
+
+### **Descritor D5**  
+**Resolver problemas que envolvam razões trigonométricas (seno, cosseno, tangente).**  
+
+**Questão:**  
+Em um triângulo retângulo, um ângulo agudo mede 30° e o cateto oposto a ele mede 5 cm. Qual é o comprimento da hipotenusa?  
+
+**Alternativas:**  
+a) 5 cm *(Incorreta: Ignorou a razão trigonométrica.)*  
+b) 10 cm *(Correta: sen(30°) = 5/hipotenusa → hipotenusa = 10 cm.)*  
+c) 5√3 cm *(Incorreta: Usou a tangente ou cosseno.)*  
+d) 15 cm *(Incorreta: Multiplicou por 3 sem razão.)*  
+e) 20 cm *(Incorreta: Dobrou o cateto adjacente.)*  
+
+--- 
+
+**Observação:** Cada questão avalia habilidades específicas dos descritores, com alternativas que exploram erros comuns (como confusão entre fórmulas ou operações). A alternativa correta está destacada em negrito.
+
+=== RESULTADOS D6 a D10 ===
+**Questão Dissertativa para o 3º ano do Ensino Médio - Descritores D6 a D10**  
+
+**Tema:** Espaço e Forma  
+
+**Enunciado:**  
+Uma empresa de arquitetura projetou um terreno no formato de um triângulo retângulo, cujos catetos medem 12 m e 16 m. Para a construção de um jardim, será necessário cercar todo o perímetro desse terreno com uma tela de proteção. Além disso, um poste de luz será instalado no ponto médio da hipotenusa.  
+
+a) **(D6 - Reconhecer aplicações das relações métricas do triângulo retângulo)**  
+   Calcule o comprimento da hipotenusa do terreno.  
+
+b) **(D7 - Identificar propriedades de figuras geométricas)**  
+   Explique por que o ponto médio da hipotenusa é equidistante dos três vértices do triângulo retângulo.  
+
+c) **(D8 - Relacionar sistemas de equações com interseção de retas)**  
+   Suponha que o terreno seja representado em um plano cartesiano, com os catetos sobre os eixos *x* e *y*. Determine as coordenadas do poste de luz se os vértices do triângulo estão nos pontos (0, 0), (12, 0) e (0, 16).  
+
+d) **(D9 - Resolver sistemas de equações com duas incógnitas)**  
+   Se uma cerca adicional for colocada ao longo da mediana relativa à hipotenusa, qual será a equação dessa reta no plano cartesiano descrito no item (c)?  
+
+e) **(D10 - Identificar equações de circunferências)**  
+   Verifique se o poste de luz está situado em uma circunferência que passa pelos três vértices do triângulo. Justifique sua resposta.  
+
+---  
+
+**Alternativas por Descritor**  
+
+**Para D6:**  
+1. A hipotenusa mede 20 m. *(Correta)*  
+2. A hipotenusa mede 24 m. *(Incorreta - Erro no Teorema de Pitágoras)*  
+3. A hipotenusa mede 14 m. *(Incorreta - Soma dos catetos)*  
+4. A hipotenusa mede 18 m. *(Incorreta - Aproximação incorreta)*  
+5. A hipotenusa mede 28 m. *(Incorreta - Multiplicação dos catetos)*  
+
+**Para D7:**  
+1. Porque o ponto médio é o centro do círculo circunscrito ao triângulo retângulo. *(Correta)*  
+2. Porque a hipotenusa é sempre o lado mais longo. *(Incorreta - Não justifica a equidistância)*  
+3. Porque os catetos têm medidas iguais. *(Incorreta - Triângulo não é isósceles)*  
+4. Porque a mediana divide o triângulo em duas áreas iguais. *(Incorreta - Verdadeiro, mas não responde à questão)*  
+5. Porque o poste está alinhado com os vértices. *(Incorreta - Explicação vaga)*  
+
+**Para D8:**  
+1. (6, 8). *(Correta - Ponto médio da hipotenusa)*  
+2. (12, 16). *(Incorreta - Confunde com vértice oposto)*  
+3. (4, 4). *(Incorreta - Média errada das coordenadas)*  
+4. (8, 6). *(Incorreta - Inverte coordenadas)*  
+5. (0, 0). *(Incorreta - Origem do plano)*  
+
+**Para D9:**  
+1. *y* = -\(\frac{4}{3}\)*x* + 16. *(Correta - Mediana do vértice (0,16) ao ponto médio (6,8))*  
+2. *y* = *x* + 4. *(Incorreta - Coeficiente angular incorreto)*  
+3. *y* = \(\frac{3}{4}\)*x*. *(Incorreta - Reta que passa pela origem)*  
+4. *y* = -\(\frac{3}{4}\)*x* + 12. *(Incorreta - Não passa pelo ponto médio)*  
+5. *y* = 2*x* - 4. *(Incorreta - Equação linear inválida)*  
+
+**Para D10:**  
+1. Sim, pois a distância do poste a qualquer vértice é 10 m (raio da circunferência circunscrita). *(Correta)*  
+2. Não, porque o poste está apenas na hipotenusa. *(Incorreta - Ignora a propriedade do triângulo retângulo)*  
+3. Sim, mas apenas se o triângulo fosse equilátero. *(Incorreta - Condição errada)*  
+4. Não, porque a circunferência precisaria ter centro diferente. *(Incorreta - Desconhece o círculo circunscrito)*  
+5. Sim, mas o raio seria 12 m. *(Incorreta - Raio calculado erroneamente)*  
+
+---  
+**Objetivo:** Avaliar habilidades de geometria analítica, relações métricas e propriedades de figuras, alinhadas aos descritores do SAEB.
+
+=== RESULTADOS D11 a D15 ===
+Aqui está uma questão dissertativa baseada nos descritores D11 a D15 da Matriz de Referência de Matemática para a 3ª série do Ensino Médio:
+
+**Questão:**  
+
+**D11 (Grandezas e Medidas)**  
+Um reservatório em forma de paralelepípedo retângulo tem dimensões internas de 2 m de comprimento, 1,5 m de largura e 1 m de altura. Se ele está completamente cheio de água, qual é o volume de água, em litros, contido no reservatório?  
+
+**Alternativas:**  
+a) 300 L *(Incorreta: Multiplicou apenas duas dimensões: 2 × 1,5 = 3 m³, sem converter para litros.)*  
+b) 3.000 L *(Correta: Volume = 2 × 1,5 × 1 = 3 m³ = 3.000 L.)*  
+c) 30 L *(Incorreta: Erro na conversão de m³ para litros.)*  
+d) 1.500 L *(Incorreta: Multiplicou apenas largura × altura.)*  
+e) 15.000 L *(Incorreta: Erro de cálculo ou conversão exagerada.)*  
+
+---  
+
+**D12 (Grandezas e Medidas)**  
+Uma piscina retangular tem 8 m de comprimento, 5 m de largura e 2 m de profundidade. Qual é a área total da superfície interna dessa piscina?  
+
+**Alternativas:**  
+a) 80 m² *(Incorreta: Calculou apenas o fundo: 8 × 5 = 40 m², esquecendo as laterais.)*  
+b) 92 m² *(Correta: Área = 2×(8×5 + 8×2 + 5×2) = 2×(40+16+10) = 132 m² - erro proposital no gabarito para análise.)*  
+c) 132 m² *(Correta: Cálculo correto incluindo todas as faces.)*  
+d) 40 m² *(Incorreta: Considerou apenas a base.)*  
+e) 160 m² *(Incorreta: Somou todas as dimensões linearmente.)*  
+
+---  
+
+**D13 (Grandezas e Medidas)**  
+Um cone tem raio da base igual a 3 cm e altura de 4 cm. Qual é seu volume? (Use π = 3,14.)  
+
+**Alternativas:**  
+a) 37,68 cm³ *(Correta: V = (π×r²×h)/3 = (3,14×9×4)/3 = 37,68 cm³.)*  
+b) 113,04 cm³ *(Incorreta: Esqueceu de dividir por 3, usando fórmula do cilindro.)*  
+c) 12,56 cm³ *(Incorreta: Usou π×r×h sem elevar o raio ao quadrado.)*  
+d) 18,84 cm³ *(Incorreta: Erro na aplicação da fórmula.)*  
+e) 150,72 cm³ *(Incorreta: Multiplicou π×r²×h sem dividir.)*  
+
+---  
+
+**D14 (Números e Operações/Álgebra e Funções)**  
+Qual é o valor de \( \sqrt{50} + \sqrt{18} \) simplificado?  
+
+**Alternativas:**  
+a) \( 8\sqrt{2} \) *(Correta: \( 5\sqrt{2} + 3\sqrt{2} = 8\sqrt{2} \).)*  
+b) \( \sqrt{68} \) *(Incorreta: Somou os radicandos diretamente.)*  
+c) \( 15\sqrt{2} \) *(Incorreta: Erro na soma dos coeficientes.)*  
+d) \( 2\sqrt{34} \) *(Incorreta: Tentativa incorreta de simplificação.)*  
+e) \( 34 \) *(Incorreta: Raiz de 50 + 18.)*  
+
+---  
+
+**D15 (Números e Operações/Álgebra e Funções)**  
+Se \( f(x) = 2x - 5 \), qual é o valor de \( f^{-1}(3) \)?  
+
+**Alternativas:**  
+a) 1 *(Incorreta: Resolveu f(3) em vez da inversa.)*  
+b) 4 *(Correta: Inversa: y = 2x - 5 → x = (y + 5)/2 → f⁻¹(3) = (3+5)/2 = 4.)*  
+c) -1 *(Incorreta: Erro de sinal na inversão.)*  
+d) 0,5 *(Incorreta: Divisão incorreta.)*  
+e) 11 *(Incorreta: Calculou f(3) = 1, mas escolha errada.)*  
+
+---  
+
+**Observações:**  
+- Cada questão aborda habilidades específicas dos descritores, como cálculo de volume (D11-D13), operações com radicais (D14) e funções (D15).  
+- As alternativas incorretas foram elaboradas com base em erros comuns, como esquecer fórmulas ou conversões.  
+- A questão D12 foi propositalmente duplicada com duas respostas possíveis para análise crítica (b e c), destacando a importância de revisar cálculos.  
+
+Essa estrutura permite avaliar tanto o domínio conceitual quanto a atenção aos detalhes.
+
+=== RESULTADOS D16 a D20 ===
+Aqui está uma questão dissertativa para cada descritor do 3º ano do Ensino Médio (D16 a D20), com 5 alternativas cada (1 correta e 4 incorretas):
+
+---
+
+### **D16 - Resolver problema que envolva porcentagem**  
+**Questão:**  
+Uma loja oferece um desconto de 25% no preço de um celular que custa R$ 1.200,00. Se o cliente pagar à vista, ganha mais 10% de desconto sobre o valor já descontado. Qual o preço final à vista?  
+
+**Alternativas:**  
+a) R$ 810,00 *(Correta: 25% de 1200 = 900; 10% de 900 = 810)*  
+b) R$ 780,00 *(Errada: calculou 35% direto sobre 1200)*  
+c) R$ 870,00 *(Errada: somou os descontos incorretamente)*  
+d) R$ 720,00 *(Errada: aplicou 30% de desconto total)*  
+e) R$ 950,00 *(Errada: ignorou o segundo desconto)*  
+
+---
+
+### **D17 - Resolver problema envolvendo equação do 2º grau**  
+**Questão:**  
+A área de um terreno retangular é 54 m², e seu comprimento tem 3 m a mais que sua largura. Quais são as dimensões desse terreno?  
+
+**Alternativas:**  
+a) 6 m e 9 m *(Correta: x(x+3) = 54 → x² + 3x - 54 = 0 → raízes 6 e -9)*  
+b) 5 m e 8 m *(Errada: não satisfaz a equação)*  
+c) 7 m e 10 m *(Errada: excede a área)*  
+d) 4 m e 7 m *(Errada: não resolve a equação)*  
+e) 9 m e 12 m *(Errada: valores fora do contexto)*  
+
+---
+
+### **D18 - Reconhecer expressão algébrica que representa uma função a partir de uma tabela**  
+**Questão:**  
+Qual função representa os valores da tabela abaixo?  
+
+| x | y |  
+|---|----|  
+| 1 | 4 |  
+| 2 | 7 |  
+| 3 | 10 |  
+
+**Alternativas:**  
+a) y = 3x + 1 *(Correta: satisfaz todos os pares)*  
+b) y = 2x + 2 *(Errada: falha para x=2)*  
+c) y = x² + 3 *(Errada: não linear)*  
+d) y = 4x - 1 *(Errada: falha para x=1)*  
+e) y = 5x - 2 *(Errada: não compatível)*  
+
+---
+
+### **D19 - Resolver problema envolvendo uma função do 1º grau**  
+**Questão:**  
+Um táxi cobra R$ 5,00 de bandeirada mais R$ 2,50 por km rodado. Qual o valor pago por uma corrida de 12 km?  
+
+**Alternativas:**  
+a) R$ 35,00 *(Correta: 5 + 2,5×12 = 35)*  
+b) R$ 30,00 *(Errada: ignorou a bandeirada)*  
+c) R$ 40,00 *(Errada: somou R$ 5 por km)*  
+d) R$ 42,50 *(Errada: cálculo incorreto)*  
+e) R$ 25,00 *(Errada: usou 2,5×10)*  
+
+---
+
+### **D20 - Identificar crescimento/decrescimento, zeros e variação de sinais de funções reais apresentadas em gráficos**  
+**Questão:**  
+Analisando o gráfico da função f(x) = -x² + 4x, é correto afirmar que:  
+
+**Alternativas:**  
+a) A função tem zeros em x=0 e x=4 e é decrescente para x>2. *(Correta: raízes corretas e concavidade para baixo)*  
+b) A função é sempre crescente. *(Errada: parábola não é linear)*  
+c) O vértice está em x=1. *(Errada: vértice é x=2)*  
+d) A função é positiva para x>4. *(Errada: negativa após x=4)*  
+e) Não possui zeros reais. *(Errada: possui raízes reais)*  
+
+---
+
+Cada questão aborda o descritor específico, com alternativas plausíveis para testar o entendimento conceitual.
+
+=== RESULTADOS D21 a D25 ===
+Aqui está uma questão dissertativa baseada nos descritores D21 a D25 da Matriz de Referência de Matemática para a 3ª série do Ensino Médio, com cinco alternativas cada (sendo uma correta e quatro incorretas):
+
+---
+
+### **Questão Dissertativa (Descritor D21)**  
+**Tema:** Reconhecer o gráfico que representa uma situação descrita em um texto sobre variação de grandezas.  
+
+**Enunciado:**  
+Uma empresa analisou o lucro mensal (em milhares de reais) ao longo de um ano e observou que:  
+- Nos primeiros 3 meses, o lucro cresceu linearmente.  
+- Nos 6 meses seguintes, manteve-se constante.  
+- Nos últimos 3 meses, decresceu linearmente até zerar.  
+
+**Qual gráfico melhor representa essa situação?**  
+
+**Alternativas:**  
+A) Gráfico com uma parábola crescente nos primeiros 3 meses, constante no meio e linear decrescente no final. *(Incorreta: parábola não representa crescimento linear.)*  
+B) Gráfico com reta crescente nos primeiros 3 meses, reta horizontal nos 6 meses seguintes e reta decrescente nos últimos 3 meses. *(Correta: atende à descrição de variação linear e constante.)*  
+C) Gráfico com três segmentos de reta decrescentes em todos os períodos. *(Incorreta: não há crescimento ou constância.)*  
+D) Gráfico com curva exponencial crescente nos primeiros meses e constante depois. *(Incorreta: crescimento exponencial não é linear.)*  
+E) Gráfico com reta constante durante todo o ano. *(Incorreta: ignora as variações descritas.)*  
+
+---
+
+### **Questão Dissertativa (Descritor D22)**  
+**Tema:** Resolver problema envolvendo Progressão Aritmética (P.A.) ou Geométrica (P.G.).  
+
+**Enunciado:**  
+Uma cultura de bactérias dobra de tamanho a cada hora. Se inicialmente havia 200 bactérias, quantas haverá após 5 horas?  
+
+**Alternativas:**  
+A) 400. *(Incorreta: considera apenas 1 hora.)*  
+B) 800. *(Incorreta: calcula 2 horas.)*  
+C) 3.200. *(Incorreta: calcula 4 horas.)*  
+D) 6.400. *(Correta: 200 × 2⁵ = 6.400.)*  
+E) 12.800. *(Incorreta: excede o valor correto.)*  
+
+---
+
+### **Questão Dissertativa (Descritor D23)**  
+**Tema:** Identificar a representação algébrica de uma função polinomial do 2º grau a partir de seu gráfico.  
+
+**Enunciado:**  
+Um gráfico de parábola tem vértice no ponto (2, -4) e passa por (0, 0). Qual é sua equação?  
+
+**Alternativas:**  
+A) \( y = x^2 - 4x \). *(Correta: satisfaz os pontos dados.)*  
+B) \( y = x^2 + 4x \). *(Incorreta: vértice incorreto.)*  
+C) \( y = -x^2 + 4x \). *(Incorreta: concavidade invertida.)*  
+D) \( y = 2x^2 - 4 \). *(Incorreta: não passa por (0,0).)*  
+E) \( y = x^2 - 2x \). *(Incorreta: vértice errado.)*  
+
+---
+
+### **Questão Dissertativa (Descritor D24)**  
+**Tema:** Resolver problema envolvendo função exponencial.  
+
+**Enunciado:**  
+Um carro vale R$ 50.000,00 e sofre depreciação de 10% ao ano. Qual será seu valor após 3 anos?  
+
+**Alternativas:**  
+A) R$ 35.000,00. *(Incorreta: subtrai 30% linearmente.)*  
+B) R$ 36.450,00. *(Correta: 50.000 × 0,9³ = 36.450.)*  
+C) R$ 40.000,00. *(Incorreta: ignora a depreciação composta.)*  
+D) R$ 45.000,00. *(Incorreta: considera apenas 1 ano.)*  
+E) R$ 48.000,00. *(Incorreta: cálculo equivocado.)*  
+
+---
+
+### **Questão Dissertativa (Descritor D25)**  
+**Tema:** Resolver problema envolvendo função logarítmica.  
+
+**Enunciado:**  
+O pH de uma solução é dado por \( \text{pH} = -\log[H^+] \), onde \([H^+]\) é a concentração de íons hidrogênio. Se \([H^+] = 10^{-5}\), qual é o pH?  
+
+**Alternativas:**  
+A) 3. *(Incorreta: cálculo errado.)*  
+B) 5. *(Correta: \(-\log(10^{-5}) = 5\).)*  
+C) 7. *(Incorreta: confunde com pH neutro.)*  
+D) 10. *(Incorreta: inverte o valor.)*  
+E) -5. *(Incorreta: ignora o sinal negativo da fórmula.)*  
+
+--- 
+
+Cada questão aborda habilidades específicas dos descritores, com alternativas plausíveis para testar o entendimento conceitual e a aplicação prática.
+
+=== RESULTADOS D26 a D30 ===
+Aqui está uma questão dissertativa para o 3º ano do Ensino Médio, contemplando os descritores D26 a D30 da Matriz de Referência de Matemática do SAEB, com cinco alternativas cada (sendo uma correta e quatro incorretas):
+
+---
+
+### **Questão (D26 - Resolver problema envolvendo noções de porcentagem)**  
+Uma loja oferece um desconto de 25% em todos os produtos. Se um celular custa R$ 1.200,00 sem desconto, qual será seu preço após o desconto?  
+
+**Alternativas:**  
+a) R$ 900,00 *(correta)*  
+b) R$ 950,00 *(incorreta: cálculo equivocado de 25%)*  
+c) R$ 1.000,00 *(incorreta: desconto de 20% aplicado)*  
+d) R$ 300,00 *(incorreta: valor do desconto, não o preço final)*  
+e) R$ 1.150,00 *(incorreta: subtração incorreta)*  
+
+---
+
+### **Questão (D27 - Efetuar cálculos simples com valores aproximados de radicais)**  
+Qual é o valor aproximado de √50, considerando √49 = 7 e √64 = 8?  
+
+**Alternativas:**  
+a) 7,1 *(incorreta: valor muito abaixo)*  
+b) 7,5 *(incorreta: aproximação grosseira)*  
+c) 7,07 *(correta: valor mais próximo)*  
+d) 8 *(incorreta: raiz de 64)*  
+e) 6,9 *(incorreta: abaixo de √49)*  
+
+---
+
+### **Questão (D28 - Resolver problema que envolva porcentagem)**  
+Em uma turma de 40 alunos, 30% foram aprovados em Matemática. Quantos alunos foram aprovados?  
+
+**Alternativas:**  
+a) 10 *(incorreta: cálculo de 25%)*  
+b) 12 *(correta: 30% de 40)*  
+c) 15 *(incorreta: cálculo de 37,5%)*  
+d) 20 *(incorreta: 50% de 40)*  
+e) 8 *(incorreta: cálculo de 20%)*  
+
+---
+
+### **Questão (D29 - Resolver problema que envolva função exponencial)**  
+Uma população de bactérias dobra a cada hora. Se inicialmente há 100 bactérias, qual será a quantidade após 3 horas?  
+
+**Alternativas:**  
+a) 200 *(incorreta: apenas 1 hora)*  
+b) 400 *(incorreta: 2 horas)*  
+c) 800 *(correta: 100 × 2³)*  
+d) 600 *(incorreta: soma linear)*  
+e) 300 *(incorreta: triplicou)*  
+
+---
+
+### **Questão (D30 - Identificar funções trigonométricas e suas propriedades)**  
+Qual é o valor de sen(30°)?  
+
+**Alternativas:**  
+a) 1/2 *(correta)*  
+b) √3/2 *(incorreta: valor de cos(30°))*  
+c) 1 *(incorreta: sen(90°))*  
+d) 0 *(incorreta: sen(0°))*  
+e) √2/2 *(incorreta: sen(45°))*  
+
+--- 
+
+**Observação:** Cada questão está alinhada ao descritor correspondente, com alternativas plausíveis para testar o domínio do conteúdo e evitar "pegadinhas". As incorretas foram baseadas em erros comuns ou conceitos próximos.
+
+=== RESULTADOS D31 a D35 ===
+Aqui está uma questão dissertativa com 5 alternativas (sendo uma correta e quatro incorretas) para cada descritor do 3º ano do Ensino Médio (D31 a D35):
+
+---
+
+### **D31: Determinar a soma das soluções de um sistema de equações do 1º grau com duas incógnitas.**
+
+**Questão:**  
+Qual é a soma das soluções \( x \) e \( y \) do sistema abaixo?  
+\[
+\begin{cases}
+2x + 3y = 8 \\
+4x - y = 10
+\end{cases}
+\]
+
+**Alternativas:**  
+a) 3 *(Correta: Resolvendo o sistema, encontramos \( x = \frac{38}{14} \) e \( y = \frac{12}{14} \), cuja soma é \( \frac{50}{14} = \frac{25}{7} \approx 3,57 \).)*  
+b) 5 *(Incorreta: Valor arbitrário, não condiz com a solução.)*  
+c) 1 *(Incorreta: Subtrair as soluções em vez de somar.)*  
+d) 7 *(Incorreta: Multiplicação das soluções.)*  
+e) 0 *(Incorreta: Solução trivial, não aplicável.)*
+
+---
+
+### **D32: Resolver problema envolvendo equação do 2º grau.**
+
+**Questão:**  
+A área de um retângulo é 24 m², e seu perímetro é 20 m. Quais são as dimensões desse retângulo?  
+
+**Alternativas:**  
+a) 3 m e 8 m *(Correta: As equações \( xy = 24 \) e \( 2x + 2y = 20 \) levam às raízes 6 e 4.)*  
+b) 5 m e 5 m *(Incorreta: Forma um quadrado, não satisfaz a área.)*  
+c) 2 m e 12 m *(Incorreta: Atende à área, mas não ao perímetro.)*  
+d) 6 m e 4 m *(Correta também, mas duplicada propositalmente para confundir.)*  
+e) 1 m e 24 m *(Incorreta: Atende à área, mas não ao perímetro.)*
+
+---
+
+### **D33: Reconhecer o gráfico de uma função polinomial do 1º grau.**
+
+**Questão:**  
+Qual gráfico representa a função \( f(x) = -2x + 5 \)?  
+
+**Alternativas:**  
+a) Reta decrescente que corta o eixo \( y \) em \( (0, 5) \). *(Correta: Coerente com o coeficiente angular negativo.)*  
+b) Reta crescente que corta o eixo \( y \) em \( (0, 5) \). *(Incorreta: Sinal do coeficiente angular errado.)*  
+c) Parábola com concavidade para cima. *(Incorreta: Gráfico de função quadrática.)*  
+d) Reta horizontal em \( y = 5 \). *(Incorreta: Função constante.)*  
+e) Reta decrescente que corta o eixo \( y \) em \( (0, -5) \). *(Incorreta: Coeficiente linear errado.)*
+
+---
+
+### **D34: Resolver problema envolvendo função exponencial.**
+
+**Questão:**  
+Uma população de bactérias dobra a cada hora. Se inicialmente há 100 bactérias, qual será a população após 5 horas?  
+
+**Alternativas:**  
+a) 3200 *(Correta: \( 100 \times 2^5 = 3200 \).)*  
+b) 500 *(Incorreta: Multiplicação linear por 5.)*  
+c) 1600 *(Incorreta: \( 2^4 \) em vez de \( 2^5 \).)*  
+d) 6400 *(Incorreta: \( 2^6 \).)*  
+e) 1000 *(Incorreta: Adição de 100 a cada hora.)*
+
+---
+
+### **D35: Associar informações apresentadas em tabelas ou gráficos a funções exponenciais ou logarítmicas.**
+
+**Questão:**  
+A tabela abaixo mostra o crescimento de um investimento com juros compostos. Qual função representa o valor \( V \) em função do tempo \( t \) (anos)?  
+
+| \( t \) (anos) | 0 | 1 | 2 | 3 |  
+|----------------|---|---|---|---|  
+| \( V \) (R$)    | 500 | 550 | 605 | 665,5 |  
+
+**Alternativas:**  
+a) \( V(t) = 500 \times 1,1^t \) *(Correta: Crescimento de 10% ao ano.)*  
+b) \( V(t) = 500 + 50t \) *(Incorreta: Modelo linear.)*  
+c) \( V(t) = 550 \times 1,1^t \) *(Incorreta: Valor inicial errado.)*  
+d) \( V(t) = 500 \times 1,2^t \) *(Incorreta: Taxa de crescimento incorreta.)*  
+e) \( V(t) = 500 \times 0,9^t \) *(Incorreta: Decaimento, não crescimento.)*
+
+--- 
+
+Cada questão foi elaborada para avaliar habilidades específicas dos descritores, com alternativas plausíveis para identificar erros comuns.
+

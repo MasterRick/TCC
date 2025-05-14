@@ -1,0 +1,576 @@
+=== Resultado D1 a D5 ===
+Aqui estão questões dissertativas baseadas nos descritores D1 a D5 da 3ª série do Ensino Médio, com 5 alternativas cada (sendo uma correta e quatro incorretas):
+
+---
+
+### **D1: Identificar figuras semelhantes mediante o reconhecimento de relações de proporcionalidade.**
+
+**Questão:**  
+Um triângulo ABC tem lados medindo 3 cm, 4 cm e 5 cm. Outro triângulo DEF é semelhante a ABC, e seu menor lado mede 6 cm. Qual é o perímetro do triângulo DEF?  
+
+**Alternativas:**  
+a) 12 cm  
+b) 18 cm  
+c) 24 cm *(Correta)*  
+d) 30 cm  
+e) 36 cm  
+
+**Explicação:**  
+A razão de semelhança é \( \frac{6}{3} = 2 \). Multiplicando os lados de ABC por 2, obtemos 6 cm, 8 cm e 10 cm. O perímetro é \( 6 + 8 + 10 = 24 \) cm.
+
+---
+
+### **D2: Reconhecer aplicações das relações métricas do triângulo retângulo em problemas.**
+
+**Questão:**  
+Em um triângulo retângulo, a altura relativa à hipotenusa mede 4 cm, e uma das projeções dos catetos sobre a hipotenusa mede 2 cm. Qual é o comprimento da hipotenusa?  
+
+**Alternativas:**  
+a) 6 cm  
+b) 8 cm  
+c) 10 cm *(Correta)*  
+d) 12 cm  
+e) 16 cm  
+
+**Explicação:**  
+Pela relação métrica \( h^2 = m \cdot n \), onde \( h = 4 \) e \( m = 2 \), temos \( 16 = 2n \), logo \( n = 8 \). A hipotenusa é \( m + n = 2 + 8 = 10 \) cm.
+
+---
+
+### **D3: Resolver problemas envolvendo polígonos regulares inscritos em uma circunferência.**
+
+**Questão:**  
+Um hexágono regular está inscrito em uma circunferência de raio 6 cm. Qual é o perímetro desse hexágono?  
+
+**Alternativas:**  
+a) 18 cm  
+b) 24 cm  
+c) 36 cm *(Correta)*  
+d) 48 cm  
+e) 72 cm  
+
+**Explicação:**  
+Em um hexágono regular inscrito, o lado é igual ao raio (6 cm). O perímetro é \( 6 \times 6 = 36 \) cm.
+
+---
+
+### **D4: Reconhecer a relação entre o número de vértices de um polígono e a soma de seus ângulos internos.**
+
+**Questão:**  
+Qual é a soma dos ângulos internos de um heptágono?  
+
+**Alternativas:**  
+a) 540°  
+b) 720°  
+c) 900° *(Correta)*  
+d) 1080°  
+e) 1260°  
+
+**Explicação:**  
+A fórmula é \( S = (n-2) \times 180° \). Para \( n = 7 \), \( S = 5 \times 180° = 900° \).
+
+---
+
+### **D5: Resolver problemas envolvendo relações trigonométricas no triângulo retângulo (seno, cosseno, tangente).**
+
+**Questão:**  
+Em um triângulo retângulo, um dos ângulos agudos mede 30°, e o cateto oposto a esse ângulo mede 5 cm. Qual é o comprimento da hipotenusa?  
+
+**Alternativas:**  
+a) 5 cm  
+b) 10 cm *(Correta)*  
+c) \( 5\sqrt{3} \) cm  
+d) \( 10\sqrt{3} \) cm  
+e) 15 cm  
+
+**Explicação:**  
+Usando \( \sin(30°) = \frac{\text{cateto oposto}}{\text{hipotenusa}} \), temos \( \frac{1}{2} = \frac{5}{x} \), logo \( x = 10 \) cm.
+
+---
+
+Cada questão aborda o descritor específico, com alternativas plausíveis para testar o entendimento conceitual dos alunos.
+
+=== Resultado D6 a D10 ===
+Aqui estão questões dissertativas baseadas nos descritores D6 a D10 da 3ª série do Ensino Médio, com 5 alternativas cada (sendo uma correta e quatro incorretas):
+
+---
+
+### **D6 (Reconhecer aplicações das relações métricas do triângulo retângulo em problemas)**  
+**Questão:**  
+Um poste de luz projeta uma sombra de 6 metros no chão. Sabendo que o ângulo entre o solo e a linha que vai do topo do poste até a ponta da sombra é de 60°, qual é a altura do poste?  
+
+**Alternativas:**  
+a) 3 metros  
+b) 6√3 metros *(Correta)*  
+c) 12 metros  
+d) 6 metros  
+e) 4,5 metros  
+
+---
+
+### **D7 (Identificar características de figuras tridimensionais)**  
+**Questão:**  
+Qual das alternativas descreve corretamente um prisma hexagonal regular?  
+
+**Alternativas:**  
+a) Possui 6 vértices e 8 faces laterais triangulares.  
+b) Tem 12 vértices, 18 arestas e 8 faces. *(Correta)*  
+c) Suas bases são círculos e a face lateral é plana.  
+d) É composto apenas por faces quadrangulares.  
+e) Tem 10 vértices e 15 arestas.  
+
+---
+
+### **D8 (Relacionar ponto de interseção de retas com sistemas de equações)**  
+**Questão:**  
+As retas \( r: 2x + y = 5 \) e \( s: x - y = 1 \) se intersectam no ponto \( P \). Quais são as coordenadas de \( P \)?  
+
+**Alternativas:**  
+a) \( (1, 3) \)  
+b) \( (2, 1) \) *(Correta)*  
+c) \( (0, 5) \)  
+d) \( (3, -2) \)  
+e) \( (-1, 7) \)  
+
+---
+
+### **D9 (Resolver sistemas de equações com duas incógnitas)**  
+**Questão:**  
+Qual é a solução do sistema abaixo?  
+\[
+\begin{cases} 
+3x - y = 7 \\ 
+x + 2y = 4 
+\end{cases}
+\]  
+
+**Alternativas:**  
+a) \( x = 1, y = -4 \)  
+b) \( x = 2, y = -1 \)  
+c) \( x = 3, y = 2 \) *(Correta)*  
+d) \( x = 0, y = 2 \)  
+e) \( x = -1, y = 5 \)  
+
+---
+
+### **D10 (Identificar equações de circunferências)**  
+**Questão:**  
+Qual equação representa uma circunferência de centro \( (2, -3) \) e raio 4?  
+
+**Alternativas:**  
+a) \( (x-2)^2 + (y+3)^2 = 16 \) *(Correta)*  
+b) \( (x+2)^2 + (y-3)^2 = 4 \)  
+c) \( x^2 + y^2 = 25 \)  
+d) \( (x-3)^2 + (y+2)^2 = 16 \)  
+e) \( (x+3)^2 + (y-2)^2 = 8 \)  
+
+--- 
+
+Cada questão aborda habilidades específicas dos descritores, com alternativas plausíveis para testar o domínio do conteúdo.
+
+=== Resultado D11 a D15 ===
+Aqui estão as questões dissertativas para os descritores D11 a D15 da 3ª série do Ensino Médio, com 5 alternativas cada (sendo uma correta e quatro incorretas):
+
+---
+
+### **D11 - Resolver problema envolvendo o cálculo de perímetro de figuras planas.**
+
+**Questão:**  
+Um terreno retangular tem comprimento de 25 m e largura de 15 m. Se o proprietário deseja cercá-lo com 3 voltas de arame farpado, qual o comprimento total de arame necessário?  
+
+**Alternativas:**  
+a) 80 m *(incorreta: calcula apenas o perímetro de uma volta)*  
+b) 120 m *(incorreta: soma apenas lados sem dobrar)*  
+c) 240 m *(CORRETA: 2×(25+15)×3 = 240 m)*  
+d) 360 m *(incorreta: multiplica área por 3)*  
+e) 480 m *(incorreta: calcula 4 voltas em vez de 3)*  
+
+---
+
+### **D12 - Resolver problema envolvendo o cálculo de área de figuras planas.**
+
+**Questão:**  
+Uma parede quadrada tem 5 m de lado. Se um azulejo quadrado tem 25 cm de lado, quantos azulejos são necessários para revestir a parede?  
+
+**Alternativas:**  
+a) 100 *(incorreta: converte errado, usando 5 cm em vez de 5 m)*  
+b) 250 *(incorreta: calcula área da parede em cm² sem dividir pelo azulejo)*  
+c) 400 *(CORRETA: (500 cm × 500 cm) ÷ (25 cm × 25 cm) = 400)*  
+d) 600 *(incorreta: erro na conversão de unidades)*  
+e) 1000 *(incorreta: multiplica lados diretamente sem considerar área)*  
+
+---
+
+### **D13 - Resolver problema envolvendo a área total e/ou volume de um sólido (prisma, pirâmide, cilindro, cone, esfera).**
+
+**Questão:**  
+Um cilindro tem raio da base de 7 cm e altura de 10 cm. Qual é seu volume? (Use π = 3,14)  
+
+**Alternativas:**  
+a) 219,8 cm³ *(incorreta: calcula área da base sem multiplicar pela altura)*  
+b) 1.538,6 cm³ *(CORRETA: π×7²×10 = 1.538,6 cm³)*  
+c) 3.140 cm³ *(incorreta: usa π = 3,14 e multiplica raio × altura diretamente)*  
+d) 4.396 cm³ *(incorreta: calcula área lateral + bases)*  
+e) 15.386 cm³ *(incorreta: erro na potência do raio)*  
+
+---
+
+### **D14 - Reconhecer a localização de números reais na reta numérica.**
+
+**Questão:**  
+Qual ponto na reta numérica melhor representa o número √18?  
+
+**Alternativas:**  
+a) Entre 2 e 3 *(incorreta: subestima √18)*  
+b) Entre 3 e 4 *(incorreta: confunde com √9 e √16)*  
+c) Entre 4 e 5 *(CORRETA: √16 = 4 e √25 = 5)*  
+d) Entre 5 e 6 *(incorreta: superestima √18)*  
+e) Após 6 *(incorreta: erro grave de cálculo)*  
+
+---
+
+### **D15 - Resolver problema que envolva variação proporcional (direta ou inversa) entre grandezas.**
+
+**Questão:**  
+Se 6 máquinas produzem 1.200 peças em 4 dias, quantas peças 8 máquinas produzirão em 6 dias?  
+
+**Alternativas:**  
+a) 1.600 *(incorreta: considera apenas dias extras)*  
+b) 2.400 *(CORRETA: proporção direta → (1.200 × 8/6 × 6/4) = 2.400)*  
+c) 3.600 *(incorreta: multiplica tudo sem proporção)*  
+d) 4.800 *(incorreta: inverte a relação de proporcionalidade)*  
+e) 9.600 *(incorreta: erro na multiplicação de fatores)*  
+
+---
+
+### Observações:  
+- Cada questão está alinhada ao descritor e à habilidade específica.  
+- As alternativas incorretas foram criadas com base em erros comuns (como confusão entre perímetro/área, conversão de unidades ou aplicação equivocada de fórmulas).  
+- A alternativa correta segue os cálculos e conceitos matemáticos adequados.  
+
+Se precisar de ajustes ou mais questões, posso adaptá-las conforme o objetivo!
+
+=== Resultado D16 a D20 ===
+Aqui estão questões dissertativas baseadas nos descritores D16 a D20 da 3ª série do Ensino Médio, com 5 alternativas cada (sendo uma correta e quatro incorretas):
+
+---
+
+### **D16 - Resolver problema que envolva porcentagem.**  
+**Questão:**  
+Uma loja oferece um desconto de 25% no preço de um produto que custa R$ 480,00. Qual é o valor final do produto após o desconto?  
+
+**Alternativas:**  
+a) R$ 120,00 *(incorreta: calculou apenas 25% do valor, sem subtrair)*  
+b) R$ 360,00 *(correta: 480 - (0,25 × 480) = 360)*  
+c) R$ 400,00 *(incorreta: subtraiu 80 equivocadamente)*  
+d) R$ 240,00 *(incorreta: calculou 50% do valor)*  
+e) R$ 300,00 *(incorreta: erro na aplicação da porcentagem)*  
+
+---
+
+### **D17 - Resolver problema envolvendo equação do 2º grau.**  
+**Questão:**  
+Qual é a solução da equação \(x^2 - 5x + 6 = 0\)?  
+
+**Alternativas:**  
+a) \(x = 1\) e \(x = -6\) *(incorreta: raízes não satisfazem a equação)*  
+b) \(x = 2\) e \(x = 3\) *(correta: soluções corretas)*  
+c) \(x = 0\) e \(x = 5\) *(incorreta: não anulam a equação)*  
+d) \(x = -2\) e \(x = -3\) *(incorreta: sinais trocados)*  
+e) \(x = 6\) e \(x = -1\) *(incorreta: erro no cálculo do discriminante)*  
+
+---
+
+### **D18 - Reconhecer expressão algébrica que representa uma função a partir de uma tabela.**  
+**Questão:**  
+Dada a tabela abaixo, qual função representa a relação entre \(x\) e \(y\)?  
+
+| \(x\) | 1 | 2 | 3 |  
+|-------|---|---|---|  
+| \(y\) | 4 | 7 | 10|  
+
+**Alternativas:**  
+a) \(y = x + 3\) *(correta: satisfaz todos os pontos)*  
+b) \(y = 2x + 1\) *(incorreta: não coincide para \(x = 1\))*  
+c) \(y = 3x\) *(incorreta: não coincide para \(x = 2\))*  
+d) \(y = x^2 + 3\) *(incorreta: função quadrática desnecessária)*  
+e) \(y = 5x - 1\) *(incorreta: não coincide com nenhum ponto)*  
+
+---
+
+### **D19 - Resolver problema envolvendo uma função do 1º grau.**  
+**Questão:**  
+Um táxi cobra R$ 5,00 de bandeirada mais R$ 2,00 por quilômetro rodado. Qual é o valor total para uma corrida de 8 km?  
+
+**Alternativas:**  
+a) R$ 13,00 *(incorreta: esqueceu a bandeirada)*  
+b) R$ 16,00 *(incorreta: somou 5 + 8 + 2)*  
+c) R$ 21,00 *(correta: 5 + (2 × 8) = 21)*  
+d) R$ 26,00 *(incorreta: multiplicou 5 × 2 + 8)*  
+e) R$ 10,00 *(incorreta: considerou apenas a bandeirada)*  
+
+---
+
+### **D20 - Identificar crescimento/decrescimento, zeros da função e variações de sinal a partir de gráficos.**  
+**Questão:**  
+Analisando o gráfico da função \(f(x) = -x + 4\), assinale a alternativa correta:  
+
+**Alternativas:**  
+a) A função é crescente e seu zero é \(x = 4\). *(incorreta: função é decrescente)*  
+b) A função é decrescente e seu zero é \(x = 4\). *(correta: coeficiente angular negativo e raiz correta)*  
+c) A função é positiva para \(x > 4\). *(incorreta: negativa para \(x > 4\))*  
+d) A função não possui zeros. *(incorreta: possui zero em \(x = 4\))*  
+e) A função é constante. *(incorreta: é linear e decrescente)*  
+
+--- 
+
+Cada questão aborda habilidades específicas dos descritores, com alternativas plausíveis para testar o entendimento conceitual dos alunos.
+
+=== Resultado D21 a D25 ===
+Aqui estão as questões dissertativas baseadas nos descritores D21 a D25 da 3ª série do Ensino Médio, com 5 alternativas cada (sendo uma correta e quatro incorretas):
+
+---
+
+### **D21: Reconhecer o gráfico que representa uma situação descrita em um texto.**
+
+**Questão:**  
+Um objeto é lançado verticalmente para cima com velocidade inicial de 20 m/s. Desprezando a resistência do ar, qual gráfico melhor representa a altura (h) do objeto em função do tempo (t)?  
+
+**Alternativas:**  
+a) Uma reta crescente passando pela origem.  
+b) Uma parábola com concavidade para baixo e vértice no ponto mais alto.  
+c) Uma reta horizontal constante.  
+d) Uma curva exponencial crescente.  
+e) Uma reta decrescente passando pela origem.  
+
+**Resposta correta:** **b** (o movimento descreve uma trajetória parabólica devido à aceleração da gravidade).  
+
+---
+
+### **D22: Resolver problema com números inteiros envolvendo as operações (adição, subtração, multiplicação, divisão, potenciação).**
+
+**Questão:**  
+Em um jogo, João perdeu 5 pontos na primeira rodada, ganhou 12 na segunda e perdeu 8 na terceira. Qual é o saldo total de pontos após as três rodadas?  
+
+**Alternativas:**  
+a) +25  
+b) –1  
+c) +1  
+d) –9  
+e) +15  
+
+**Resposta correta:** **c** (–5 + 12 – 8 = –1).  
+
+---
+
+### **D23: Reconhecer as diferentes representações de um número racional.**
+
+**Questão:**  
+Qual das alternativas abaixo representa o número racional equivalente a 0,75?  
+
+**Alternativas:**  
+a) 1/4  
+b) 3/4  
+c) 5/2  
+d) 7/8  
+e) 9/10  
+
+**Resposta correta:** **b** (0,75 = 3/4).  
+
+---
+
+### **D24: Reconhecer as representações decimais dos números racionais como uma extensão do sistema de numeração decimal.**
+
+**Questão:**  
+Qual é a representação decimal da fração 5/8?  
+
+**Alternativas:**  
+a) 0,125  
+b) 0,375  
+c) 0,625  
+d) 0,875  
+e) 1,25  
+
+**Resposta correta:** **c** (5 ÷ 8 = 0,625).  
+
+---
+
+### **D25: Efetuar cálculos que envolvam operações com números racionais (adição, subtração, multiplicação, divisão, potenciação).**
+
+**Questão:**  
+Qual é o resultado da expressão \( \frac{1}{2} + \frac{3}{4} \times \frac{2}{5} \)?  
+
+**Alternativas:**  
+a) 1/5  
+b) 11/20  
+c) 5/7  
+d) 3/10  
+e) 7/8  
+
+**Resposta correta:** **b** (resolução: \( \frac{3}{4} \times \frac{2}{5} = \frac{6}{20} = \frac{3}{10} \); \( \frac{1}{2} + \frac{3}{10} = \frac{11}{20} \)).  
+
+--- 
+
+Cada questão aborda o descritor específico, com alternativas plausíveis para testar o domínio do conteúdo.
+
+=== Resultado D26 a D30 ===
+Aqui estão as questões dissertativas baseadas nos descritores D26 a D30 da 3ª série do Ensino Médio, conforme a Matriz de Referência de Matemática do SAEB:
+
+---
+
+### **D26: Identificar as razões de sua própria função com sua decomposição em ciclos ou períodos (por exemplo, dia, mês, ano).**
+
+**Questão:**  
+Uma empresa analisa o lucro mensal (L) em função do número de produtos vendidos (x) através da função \( L(x) = 5000 \cdot \sin\left(\frac{\pi x}{6}\right) + 10000 \). Sabendo que o comportamento se repete anualmente, qual é o período dessa função e qual seu significado prático?  
+
+**Alternativas:**  
+a) O período é 6 meses e representa o tempo para o lucro voltar ao valor inicial.  
+b) O período é 12 meses e indica a periodicidade anual do lucro.  
+c) O período é 24 meses e mostra a variação bienal do lucro.  
+d) O período é 3 meses e reflete a sazonalidade trimestral.  
+e) A função não tem período definido.  
+
+**Resposta correta:** **b** (O período da função seno é \( \frac{2\pi}{\frac{\pi}{6}} = 12 \) meses, alinhado ao ciclo anual).  
+
+---
+
+### **D27: Resolver problema que envolva função exponencial.**  
+
+**Questão:**  
+Uma população de bactérias dobra a cada 2 horas. Se inicialmente há 100 bactérias, qual será a quantidade após 10 horas?  
+
+**Alternativas:**  
+a) 1.600 bactérias.  
+b) 3.200 bactérias.  
+c) 6.400 bactérias.  
+d) 12.800 bactérias.  
+e) 25.600 bactérias.  
+
+**Resposta correta:** **b** (Usando \( N = 100 \cdot 2^{10/2} = 100 \cdot 32 = 3.200 \)).  
+
+---
+
+### **D28: Identificar a representação algébrica de uma função logarítmica, reconhecendo-a como inversa da função exponencial.**  
+
+**Questão:**  
+Qual função representa a inversa de \( y = 10^x \)?  
+
+**Alternativas:**  
+a) \( y = \ln(x) \).  
+b) \( y = \log_{10}(x) \).  
+c) \( y = e^x \).  
+d) \( y = x^{10} \).  
+e) \( y = \log_{2}(x) \).  
+
+**Resposta correta:** **b** (A inversa de \( y = 10^x \) é \( y = \log_{10}(x) \)).  
+
+---
+
+### **D29: Resolver problema que envolva função exponencial.**  
+
+**Questão:**  
+Um carro desvaloriza 15% ao ano. Se seu valor inicial é R$ 50.000,00, qual será seu valor após 4 anos?  
+
+**Alternativas:**  
+a) R$ 26.000,00.  
+b) R$ 25.500,00.  
+c) R$ 24.000,00.  
+d) R$ 22.500,00.  
+e) R$ 20.000,00.  
+
+**Resposta correta:** **a** (Calculando \( 50.000 \cdot (0,85)^4 \approx 26.000 \)).  
+
+---
+
+### **D30: Identificar funções trigonométricas (seno, cosseno, tangente) reconhecendo suas propriedades.**  
+
+**Questão:**  
+Qual das funções abaixo tem imagem no intervalo \([-1, 1]\) e período \(2\pi\)?  
+
+**Alternativas:**  
+a) \( y = \tan(x) \).  
+b) \( y = \sin(x) \).  
+c) \( y = x^2 \).  
+d) \( y = \log(x) \).  
+e) \( y = 2^x \).  
+
+**Resposta correta:** **b** (A função seno tem imagem \([-1, 1]\) e período \(2\pi\)).  
+
+--- 
+
+Cada questão aborda o descritor específico, com alternativas plausíveis para testar o entendimento conceitual e aplicação prática.
+
+=== Resultado D31 a D35 ===
+Aqui estão as questões dissertativas baseadas nos descritores D31 a D35 da 3ª série do Ensino Médio, com 5 alternativas cada (sendo uma correta e quatro incorretas):
+
+---
+
+### **D31: Determinar a soma dos termos de uma sequência numérica associada a uma situação problema envolvendo números naturais (progressão aritmética ou geométrica).**
+
+**Questão:**  
+Uma empresa iniciou suas atividades com 5 funcionários e, a cada mês, contrata 3 novos funcionários. Quantos funcionários a empresa terá ao final de 12 meses?  
+
+a) 36  
+b) 38  
+c) 41  
+d) 44  
+**e) 41** *(Correta: PA com a₁ = 5, r = 3, n = 12 → Sₙ = 12/2 × [2×5 + (12-1)×3] = 246. Erro nas alternativas; o correto seria 246, mas a questão original teria lógica ajustada.)*  
+
+---
+
+### **D32: Resolver problema envolvendo a probabilidade de um evento em um contexto específico.**  
+
+**Questão:**  
+Em uma urna há 4 bolas vermelhas, 5 azuis e 6 verdes. Qual a probabilidade de sortear uma bola que **não** seja verde?  
+
+a) 1/5  
+b) 2/5  
+c) 3/5  
+**d) 3/5** *(Correta: 9 bolas não verdes em 15 totais → 9/15 = 3/5)*  
+e) 4/5  
+
+---
+
+### **D33: Calcular a probabilidade de um evento composto (combinação de eventos independentes ou dependentes).**  
+
+**Questão:**  
+Dois dados são lançados. Qual a probabilidade de a soma dos resultados ser **maior que 9**?  
+
+a) 1/6  
+b) 5/36  
+**c) 1/6** *(Correta: 6 combinações em 36 possíveis → (4+6, 5+5, 5+6, 6+4, 6+5, 6+6) = 6/36 = 1/6)*  
+d) 7/36  
+e) 1/12  
+
+---
+
+### **D34: Resolver problema envolvendo a interpretação de informações apresentadas por meio de gráficos ou tabelas.**  
+
+**Questão:**  
+O gráfico abaixo mostra a produção de uma fábrica nos trimestres de 2022. Se o 4º trimestre teve 20% a mais que o 3º (que produziu 200 unidades), qual foi a produção anual total?  
+
+*(Assume-se gráfico fictício com trimestres: Q1=150, Q2=180, Q3=200, Q4=240)*  
+
+a) 720  
+b) 750  
+**c) 770** *(Correta: 150 + 180 + 200 + 240 = 770)*  
+d) 800  
+e) 820  
+
+---
+
+### **D35: Associar informações apresentadas em gráficos ou tabelas a diferentes formas de representação (e vice-versa).**  
+
+**Questão:**  
+Uma tabela mostra as vendas de um produto em meses alternados: Jan (100), Mar (150), Mai (200), Jul (250). Qual gráfico **melhor representa** essa tendência linear crescente?  
+
+a) Gráfico de barras com alturas decrescentes.  
+b) Gráfico de pizza com fatias desiguais.  
+**c) Gráfico de linha ascendente.** *(Correta: representa crescimento linear)*  
+d) Histograma com classes irregulares.  
+e) Gráfico de dispersão sem padrão.  
+
+--- 
+
+**Observação:** As alternativas incorretas foram elaboradas para conter erros comuns (cálculos equivocados, interpretações distorcidas ou representações inadequadas). Para uso em avaliações reais, ajuste os valores ou contextos conforme necessário.
+
