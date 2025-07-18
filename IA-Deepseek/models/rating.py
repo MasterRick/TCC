@@ -8,12 +8,14 @@ class Rating(Base):
     __tablename__ = 'ratings'
 
     id = Column(Integer, primary_key=True, index=True)
-    question_id = Column(Integer, ForeignKey("questions.id"), nullable=False)
-    user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
-    score = Column(Integer, nullable=False)
 
     question = relationship("Question", backref="ratings")
+    question_id = Column(Integer, ForeignKey("questions.id"), nullable=False)
+
     user = relationship("User", backref="ratings")
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
+
+    score = Column(Integer, nullable=False)
 
     created_at = Column(DateTime, default=dt.datetime.now(dt.timezone.utc))
     updated_at = Column(DateTime, default=dt.datetime.now(dt.timezone.utc), onupdate=dt.datetime.now(dt.timezone.utc))

@@ -8,7 +8,7 @@ class Question(Base):
     
     id = Column(Integer, primary_key=True, index=True)
     difficulty = Column(Integer, nullable=False)
-    content = Column(String(1000), nullable=False)
+    content = Column(String(10000), nullable=False)
 
     descriptor_id = Column(Integer, ForeignKey("descriptors.id"), nullable=False)
     descriptor = relationship("Descriptor", backref="questions")

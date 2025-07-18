@@ -26,22 +26,17 @@ class CreateQuestions:
     def _create_question(self, descriptor, difficulty):
         db = SessionLocal()
         try:
-            yield db
-        finally:
-            db.close()
-        try:
             user_content = f"""
             Crie uma questão dissertativa para os descritor {descriptor}. 5 alternativas, sendo uma correta e quatro incorretas.
             Dificuldade: {difficulty}, onde 0 é fácil, 1 é médio e 2 é difícil.
             Siga o modelo abaixo para criar questão dissertativa:
-            Ao iniciar a questão, coloque "INICIO-" mais o número do descritor (ex: INICIO-D1, INICIO-D2, etc.) para indicar o início da questão.
-            1. Descritor: Coloque apenas o número do descritor (ex: D1, D2, etc.)
-            2. Questão: Crie uma questão dissertativa com base no descritor.
-            3. Alternativas: Crie 5 alternativas, sendo uma correta e quatro incorretas.
-            4. Resposta correta: Coloque apenas a letra da alternativa correta (ex: A, B, C, D, E).
-            5. Justificativa: Justifique a resposta correta de forma resumida.
+            Ao iniciar a questão, coloque "INICIO" para indicar o início da questão.
+            1. Questão: Crie uma questão dissertativa com base no descritor.
+            2. Alternativas: Crie 5 alternativas, sendo uma correta e quatro incorretas.
+            3. Resposta correta: Coloque apenas a letra da alternativa correta (ex: A, B, C, D, E).
+            4. Justificativa: Justifique a resposta correta de forma resumida.
             Não coloque nada em negrito ou itálico.
-            Ao finalizar a questão, coloque "FIM-" mais o número do descritor (ex: FIM-D1, FIM-D2, etc.) para indicar o fim da questão.
+            Ao finalizar a questão, coloque "FIM" para indicar o fim da questão.
             Não coloque mais nenhuma informação além do que foi solicitado.
             """
 
@@ -79,7 +74,7 @@ class CreateQuestions:
 
     def print_and_save_results(self, descriptor_list = []):
         try:
-                for index, descriptor in enumerate(descriptor_list, start=1):
+                for index, descriptor in enumerate(descriptor_list, start=0):
                     print(f"\n[PROCESSANDO] Gerando questão para o {descriptor}")
                     start_time = time.time()
                     self._create_question(descriptor, 1)
@@ -116,5 +111,9 @@ class CreateQuestions:
                 print(f"\n❌ Erro de Criação: {e}")
         except asyncio.CancelledError:
             print("\n❌ Processo cancelado pelo usuário.")
+
+if __name__ == "__main__":
+    create_questions = CreateQuestions()
+    create_questions.create_questions()
 
 

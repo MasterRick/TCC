@@ -1,5 +1,5 @@
 import datetime as dt
-from http.client import HTTPException
+from fastapi import HTTPException
 import os
 from pathlib import Path
 from dotenv import load_dotenv
@@ -20,9 +20,10 @@ def create_access_token(data: dict, expires_delta: dt.timedelta = None):
 def verify_token(token: str):
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
-        username: str = payload.get("sub")
-        if username is None:
+        print(f"Payload do token: {payload}")
+        user_id: int = payload.get("id")
+        if user_id is None:
             raise HTTPException(status_code=401, detail="Token inválido")
-        return {"username": username}
+        return {"id": user_id}
     except JWTError:
         raise HTTPException(status_code=401, detail="Token inválido ou expirado")
