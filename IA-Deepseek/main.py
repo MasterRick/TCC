@@ -1,18 +1,15 @@
-import asyncio
-from websocket_server import WebSocketServer
 
-# if __name__ == "__main__":
-#     extractInfo = ExtractInfo(Path("Material de Referencia/Matrizes/matriz-de-referencia-de-matematica_2001.pdf"))
-#     extractInfo.save_results(extractInfo.extract_text())
+from db import Base, engine
+from models import user, descriptor, rating, question
+from fastapi import FastAPI
+from controllers import user as user_router, login as login_router
 
+Base.metadata.create_all(bind=engine)
+app = FastAPI()
+app.include_router(user_router.router)
+app.include_router(login_router.router)
 
-
-if __name__ == "__main__":
-    try:
-        server = WebSocketServer()
-        asyncio.run(server.start())
-    except KeyboardInterrupt:
-        print("\nServidor WebSocket encerrado.")
+   
         
         
         

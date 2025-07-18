@@ -1,5 +1,5 @@
-import PyPDF2
 from pathlib import Path
+import pdfplumber
 
 class ExtractInfo:
     def __init__(self, pdf_path = Path("")):
@@ -9,10 +9,9 @@ class ExtractInfo:
         """Extrai informações em texto de um arquivo PDF"""
         print(f"Extraindo texto do PDF: {self.pdf_path}")
         text = ""
-        with open(self.pdf_path, 'rb', encoding='utf-8') as file:
-            reader = PyPDF2.PdfReader(file)
-            print(f"{len(reader.pages)} página(s) encontrada(s).")
-            for page in reader.pages:
+        with pdfplumber.open(self.pdf_path) as pdf:
+            print(f"{len(pdf.pages)} página(s) encontrada(s).")
+            for page in pdf.pages:
                 page_text = page.extract_text()
                 if page_text:
                     text += page_text
@@ -28,3 +27,4 @@ class ExtractInfo:
         with open(path / txt_output_path, 'w', encoding='utf-8') as f:
             f.write(pdf_text)
         print(f"Texto do PDF salvo em: {path / txt_output_path}")
+

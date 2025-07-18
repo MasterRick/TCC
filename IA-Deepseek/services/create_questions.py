@@ -1,12 +1,16 @@
 
 import asyncio
-import json
 import os
 from pathlib import Path
 from dotenv import load_dotenv
 from openai import OpenAI
 from datetime import datetime
 import time
+
+from requests import session
+from db import Base, engine,SessionLocal
+from models.descriptor import Descriptor
+from models.question import Question
 
 class CreateQuestions:
     env_path = Path('.') / '.env'
@@ -16,12 +20,16 @@ class CreateQuestions:
 
     client = OpenAI(api_key=DEEPSEEK_API_KEY, base_url="https://api.deepseek.com")
 
-    def __init__(self, output_path = Path("")):
-        self.output_path = output_path
+    def __init__(self):
+        pass
 
-    async def _create_question(self, descriptor, difficulty, websocket_server=None, websocket=None, file=None):
+    def _create_question(self, descriptor, difficulty):
+        db = SessionLocal()
         try:
-            file.write(f"=== RELATÓRIO GERADO EM: {datetime.now()} ===\n\n")
+            yield db
+        finally:
+            db.close()
+        try:
             user_content = f"""
             Crie uma questão dissertativa para os descritor {descriptor}. 5 alternativas, sendo uma correta e quatro incorretas.
             Dificuldade: {difficulty}, onde 0 é fácil, 1 é médio e 2 é difícil.
@@ -45,40 +53,49 @@ class CreateQuestions:
                 ],
                 stream=False
             )
-            await websocket_server.send_to_sender(json.dumps({"status": "processing", "message":  response.choices[0].message.content}), websocket)
-            file.write(f"{response.choices[0].message.content}\n\n")
-            file.flush()
-            return response.choices[0].message.content
+            
+            descriptor_data = {
+                "name": descriptor.split("–")[0],
+                "content": descriptor.split("–")[1],
+            }
+
+            descriptor = db.query(Descriptor).filter(Descriptor.name == descriptor_data["name"] and Descriptor.content == descriptor_data["content"]).first()
+            print(f"Descriptor encontrado: {descriptor}")
+            question = Question(
+                descriptor=descriptor,
+                difficulty=difficulty,
+                content=response.choices[0].message.content
+            )
+            db.add(question)
+            db.commit()
+            db.refresh(question) 
+
+            return question
        
         except Exception as e:
             print(f"Erro ao criar questão: {e}")
             return None
        
 
-    async def print_and_save_results(self, descriptor_list = [], websocket_server=None, websocket=None):
+    def print_and_save_results(self, descriptor_list = []):
         try:
-            with open(self.output_path, "w", encoding="utf-8") as file:
-                
-                for index, descriptor in enumerate(descriptor_list, start=0):
-
+                for index, descriptor in enumerate(descriptor_list, start=1):
                     print(f"\n[PROCESSANDO] Gerando questão para o {descriptor}")
                     start_time = time.time()
-                    await asyncio.gather(asyncio.create_task(self._create_question(descriptor, 1, websocket_server=websocket_server, websocket=websocket, file=file)))
+                    self._create_question(descriptor, 1)
                     elapsed_time = time.time() - start_time
                     print(f"[CONCLUÍDO] Questão para o {descriptor} gerada em {elapsed_time:.2f} segundos.")  
-                    
-                await websocket_server.send_to_sender(json.dumps({"status": "completed", "message": "Questões criadas com sucesso!"}), websocket)
         except Exception as e:
             print(f"Erro ao processar o descritor: {e}")
 
-    async def create_questions(self, total_start = time.time(), descriptors_file_name = "3ANO_EM_MAT.txt", websocket_server = None , websocket=None):
+    def create_questions(self, total_start = time.time(), descriptors_file_name = "3ANO_EM_MAT.txt"):
         try:
             try:
                 print("Iniciando processamento...")
                 now = datetime.now()
                 formatted = now.strftime('%Y-%m-%d_%H%M%S') + f'{int(now.microsecond / 1000):03d}'
                 output_file = f"{formatted}_{descriptors_file_name.split('.')[0]}_questoes.txt"
-                create_questions = CreateQuestions(Path(f"Resultados/{output_file}"))
+                create_questions = CreateQuestions()
                 descriptor_list = []
 
                 print(f"📄 Carregando arquivo de descritores: {descriptors_file_name}")
@@ -89,7 +106,7 @@ class CreateQuestions:
                 print(f"\n❌ Erro de processamento: {e}")
 
             try:
-                await create_questions.print_and_save_results(descriptor_list, websocket_server, websocket)
+                create_questions.print_and_save_results(descriptor_list)
 
                 total_time = time.time() - total_start
                 print(f"\n✅ Processo finalizado! Tempo total: {total_time:.2f} segundos")
@@ -99,4 +116,5 @@ class CreateQuestions:
                 print(f"\n❌ Erro de Criação: {e}")
         except asyncio.CancelledError:
             print("\n❌ Processo cancelado pelo usuário.")
+
 

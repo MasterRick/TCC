@@ -1,4 +1,14 @@
 python-dotenv
 openai
-PyPDF2
 websockets
+sqlalchemy
+pymysql
+pdfplumber
+fastapi
+email-validator
+uvicorn
+passlib
+bcrypt
+PyJWT
+python-jose
+python-multipart
