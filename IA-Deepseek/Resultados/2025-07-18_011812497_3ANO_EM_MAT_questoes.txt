@@ -1,0 +1,15 @@
+=== RELATÓRIO GERADO EM: 2025-07-18 01:18:39.153826 ===
+
+INICIO-D1
+1. Descritor: D1
+2. Questão: Observe os pares de figuras abaixo e identifique qual deles representa figuras semelhantes, considerando as relações de proporcionalidade entre seus lados.
+   A) Dois quadrados, um com lado 4 cm e outro com lado 8 cm.
+   B) Um triângulo equilátero com lados 5 cm e um triângulo escaleno com lados 5 cm, 6 cm e 7 cm.
+   C) Um retângulo com lados 3 cm e 6 cm e outro retângulo com lados 4 cm e 8 cm.
+   D) Um círculo com raio 2 cm e outro círculo com raio 4 cm.
+   E) Um losango com lados 7 cm e outro losango com lados 7 cm, mas com ângulos internos diferentes.
+3. Alternativas: A, B, C, D, E
+4. Resposta correta: C
+5. Justificativa: A alternativa C está correta porque os retângulos possuem lados proporcionais (3/6 = 4/8 = 1/2), mantendo a mesma forma, o que caracteriza figuras semelhantes. As outras alternativas não atendem aos critérios de semelhança, seja por diferença na forma ou na proporção.
+FIM-D1
+

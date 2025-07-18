@@ -1,0 +1,15 @@
+=== RELATÓRIO GERADO EM: 2025-07-18 01:18:24.939210 ===
+
+INICIO-D1
+1. Descritor: D1
+2. Questão: Considere os triângulos ABC e DEF. Sabendo que os lados do triângulo ABC medem 3 cm, 4 cm e 5 cm, e que os lados correspondentes do triângulo DEF medem 6 cm, 8 cm e 10 cm, qual é a relação entre esses triângulos?
+3. Alternativas: 
+A) Os triângulos são congruentes.
+B) Os triângulos são semelhantes, pois seus lados correspondentes são proporcionais.
+C) Os triângulos não são semelhantes, pois seus ângulos são diferentes.
+D) Os triângulos são semelhantes apenas se tiverem a mesma área.
+E) Os triângulos não são semelhantes, pois seus lados não são iguais.
+4. Resposta correta: B
+5. Justificativa: Os triângulos são semelhantes porque seus lados correspondentes são proporcionais (6/3 = 8/4 = 10/5 = 2), o que caracteriza a semelhança entre figuras geométricas.
+FIM-D1
+
