@@ -7,7 +7,7 @@ from bodies.descriptor import DescriptorOut
 class QuestionOut(BaseModel):
     id: int
     difficulty: int
-    content: str
+    content: dict[str, str]
     descriptor: DescriptorOut   
     created_at: datetime.datetime
     updated_at: datetime.datetime

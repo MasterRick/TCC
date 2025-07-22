@@ -31,6 +31,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
+import { loginApi } from '@/api/routers'
 
 const email = ref('')
 const password = ref('')
@@ -48,9 +49,14 @@ const passwordRules = [
 
 const login = async () => {
   await formRef.value.validate().then((result: { valid: boolean }) => {
-    console.log('Form valid:', result.valid)
     if (result.valid) {
-      router.push('/')
+      loginApi(email.value, password.value)
+        .then(() => {
+          router.push({ name: 'Início' })
+        })
+        .catch((error) => {
+          console.error('Login failed:', error)
+        })
     }
   })
 }

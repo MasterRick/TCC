@@ -11,14 +11,15 @@ def create_rating_service(rating: RatingCreate, db: Session, current_user: dict[
     user = db.query(User).filter(User.id == current_user['id']).first()
     if not user:
         raise HTTPException(status_code=404, detail="User not found")
+    
     question = db.query(Question).filter(Question.id == rating.question).first()
     if not question:
         raise HTTPException(status_code=404, detail="Question not found")
+    
     db_rating = rating.model_dump()
-    print(f"Creating rating for user: {user.id} with data: {db_rating}")
+
     db_rating["user"] = user
     db_rating["question"] = question
-    print(f"Rating data after adding user and question: {db_rating}")
     new_rating = Rating(**db_rating)
     db.add(new_rating)
     db.commit()

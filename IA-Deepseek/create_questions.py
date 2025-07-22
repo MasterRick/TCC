@@ -6,9 +6,7 @@ from dotenv import load_dotenv
 from openai import OpenAI
 from datetime import datetime
 import time
-
-from requests import session
-from db import Base, engine,SessionLocal
+from db import SessionLocal
 from models.descriptor import Descriptor
 from models.question import Question
 
@@ -32,9 +30,20 @@ class CreateQuestions:
             Siga o modelo abaixo para criar questão dissertativa:
             Ao iniciar a questão, coloque "INICIO" para indicar o início da questão.
             1. Questão: Crie uma questão dissertativa com base no descritor.
-            2. Alternativas: Crie 5 alternativas, sendo uma correta e quatro incorretas.
+            FIM-QUESTÃO
+            2. Alternativas: Crie as 5 alternativas da questão, sendo uma correta e quatro incorretas.
+            A. Alternativa A
+            B. Alternativa B
+            C. Alternativa C
+            D. Alternativa D
+            E. Alternativa E
+            FIM-ALTERNATIVAS
             3. Resposta correta: Coloque apenas a letra da alternativa correta (ex: A, B, C, D, E).
+            Resposta correta: A
+            FIM-RESPOSTA
             4. Justificativa: Justifique a resposta correta de forma resumida.
+            Justificativa: A alternativa A é a correta porque...
+            FIM-JUSTIFICATIVA
             Não coloque nada em negrito ou itálico.
             Ao finalizar a questão, coloque "FIM" para indicar o fim da questão.
             Não coloque mais nenhuma informação além do que foi solicitado.
@@ -54,8 +63,12 @@ class CreateQuestions:
                 "content": descriptor.split("–")[1],
             }
 
-            descriptor = db.query(Descriptor).filter(Descriptor.name == descriptor_data["name"] and Descriptor.content == descriptor_data["content"]).first()
-            print(f"Descriptor encontrado: {descriptor}")
+            descriptor = db.query(Descriptor).filter(Descriptor.name == descriptor_data["name"], Descriptor.content == descriptor_data["content"]).first()
+            print(f"Descritor: {descriptor}")
+
+            if not descriptor:
+                raise Exception(f"Erro ao buscar descritor: {descriptor_data}")
+
             question = Question(
                 descriptor=descriptor,
                 difficulty=difficulty,
@@ -72,24 +85,21 @@ class CreateQuestions:
             return None
        
 
-    def print_and_save_results(self, descriptor_list = []):
+    def print_and_save_results(self, descriptor_list = [], difficulty=0):
         try:
                 for index, descriptor in enumerate(descriptor_list, start=0):
                     print(f"\n[PROCESSANDO] Gerando questão para o {descriptor}")
                     start_time = time.time()
-                    self._create_question(descriptor, 1)
+                    self._create_question(descriptor, difficulty)
                     elapsed_time = time.time() - start_time
                     print(f"[CONCLUÍDO] Questão para o {descriptor} gerada em {elapsed_time:.2f} segundos.")  
         except Exception as e:
             print(f"Erro ao processar o descritor: {e}")
 
-    def create_questions(self, total_start = time.time(), descriptors_file_name = "3ANO_EM_MAT.txt"):
+    def create_questions(self, total_start = time.time(), descriptors_file_name = "3ANO_EM_MAT.txt", difficulty=0):
         try:
             try:
                 print("Iniciando processamento...")
-                now = datetime.now()
-                formatted = now.strftime('%Y-%m-%d_%H%M%S') + f'{int(now.microsecond / 1000):03d}'
-                output_file = f"{formatted}_{descriptors_file_name.split('.')[0]}_questoes.txt"
                 create_questions = CreateQuestions()
                 descriptor_list = []
 
@@ -101,11 +111,10 @@ class CreateQuestions:
                 print(f"\n❌ Erro de processamento: {e}")
 
             try:
-                create_questions.print_and_save_results(descriptor_list)
+                create_questions.print_and_save_results(descriptor_list, difficulty=difficulty)
 
                 total_time = time.time() - total_start
                 print(f"\n✅ Processo finalizado! Tempo total: {total_time:.2f} segundos")
-                print(f"📄 Arquivo gerado: {output_file}")
 
             except Exception as e:
                 print(f"\n❌ Erro de Criação: {e}")
@@ -113,7 +122,15 @@ class CreateQuestions:
             print("\n❌ Processo cancelado pelo usuário.")
 
 if __name__ == "__main__":
+    descriptors_file_name = ["5ANO_EF_MAT.txt", "3ANO_EM_MAT.txt"]
     create_questions = CreateQuestions()
-    create_questions.create_questions()
+
+    for i in range(4):
+        for file_name in descriptors_file_name:
+            print(f"\nIniciando criação de questões para o arquivo: {file_name}")
+            for difficulty in range(3):
+                print(f"Gerando questões com dificuldade {difficulty}...")
+                create_questions.create_questions(descriptors_file_name=file_name, difficulty=difficulty)
+        
 
 
