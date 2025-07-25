@@ -1,5 +1,5 @@
 import datetime as dt
-from sqlalchemy import Column, DateTime, ForeignKey, Integer
+from sqlalchemy import Column, DateTime, ForeignKey, Integer, String
 from sqlalchemy.orm import relationship
 
 from db import Base
@@ -16,6 +16,7 @@ class Rating(Base):
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
 
     score = Column(Integer, nullable=False)
+    comment = Column(String(255), nullable=True)
 
     created_at = Column(DateTime, default=dt.datetime.now(dt.timezone.utc))
     updated_at = Column(DateTime, default=dt.datetime.now(dt.timezone.utc), onupdate=dt.datetime.now(dt.timezone.utc))

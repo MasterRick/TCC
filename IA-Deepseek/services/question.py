@@ -13,7 +13,7 @@ def get_questions_service(db: Session, page: int = 1, descriptor_id: Optional[in
         db.query(Question)
         .join(Descriptor)
         .filter(
-            (Question.id == descriptor_id) if descriptor_id is not None else True,
+            (Descriptor.id == descriptor_id) if descriptor_id is not None else True,
             (Question.difficulty == difficulty) if difficulty is not None else True,
             (Descriptor.discipline == discipline) if discipline is not None else True,
             (Descriptor.classroom == classroom) if classroom is not None else True,

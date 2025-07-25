@@ -9,6 +9,7 @@ import time
 from db import SessionLocal
 from models.descriptor import Descriptor
 from models.question import Question
+import random
 
 class CreateQuestions:
     env_path = Path('.') / '.env'
@@ -22,6 +23,21 @@ class CreateQuestions:
         pass
 
     def _create_question(self, descriptor, difficulty):
+        alternate = random.randint(0, 4)
+        alternateStr = ""
+
+        if alternate == 0:
+            alternateStr = "A"
+        elif alternate == 1:
+            alternateStr = "B"
+        elif alternate == 2:
+            alternateStr = "C"
+        elif alternate == 3:
+            alternateStr = "D"
+        elif alternate == 4:
+            alternateStr = "E"
+
+        
         db = SessionLocal()
         try:
             user_content = f"""
@@ -38,8 +54,8 @@ class CreateQuestions:
             D. Alternativa D
             E. Alternativa E
             FIM-ALTERNATIVAS
-            3. Resposta correta: Coloque apenas a letra da alternativa correta (ex: A, B, C, D, E).
-            Resposta correta: A
+            3. Resposta correta: Coloque a letra da alternativa correta como {alternateStr}.
+            Resposta correta: {alternateStr}
             FIM-RESPOSTA
             4. Justificativa: Justifique a resposta correta de forma resumida.
             Justificativa: A alternativa A é a correta porque...

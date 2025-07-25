@@ -17,7 +17,6 @@ body,
   padding: 0;
 }
 .full-screen {
-  min-height: 100vh;
   min-width: 100vw;
   padding: 0;
 }

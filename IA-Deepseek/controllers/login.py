@@ -1,4 +1,3 @@
-# main.py
 from fastapi import APIRouter, Depends
 from fastapi.security import OAuth2PasswordRequestForm
 from requests import Session

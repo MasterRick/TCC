@@ -1,5 +1,5 @@
 import datetime as dt
-from sqlalchemy import Column, DateTime, Integer, String
+from sqlalchemy import Column, DateTime, ForeignKey, Integer, String
 from sqlalchemy.orm import relationship
 
 from db import Base
@@ -11,6 +11,9 @@ class User(Base):
     username = Column(String(100), nullable=False, unique=True)
     email = Column(String(100), nullable=False, unique=True)
     password = Column(String(100), nullable=False)
+
+    type = relationship("Type", backref="users")
+    type_id = Column(Integer, ForeignKey("types.id"), nullable=False)
 
     created_at = Column(DateTime, default=dt.datetime.now(dt.timezone.utc))
     updated_at = Column(DateTime, default=dt.datetime.now(dt.timezone.utc), onupdate=dt.datetime.now(dt.timezone.utc))
