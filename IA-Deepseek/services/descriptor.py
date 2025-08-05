@@ -1,5 +1,3 @@
-from typing import Optional
-from fastapi import HTTPException
 from sqlalchemy.orm import Session
 from models.descriptor import Descriptor
 from models.question import Question

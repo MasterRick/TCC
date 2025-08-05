@@ -33,11 +33,15 @@
   </v-app>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
 import { menuItems } from '../utils/RouterOptions'
 
 const drawer = ref(true)
+
+defineOptions({
+  name: 'AppToolbar',
+})
 </script>
 
 <style scoped>

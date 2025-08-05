@@ -88,6 +88,7 @@ class CreateQuestions:
             question = Question(
                 descriptor=descriptor,
                 difficulty=difficulty,
+                source="DeepSeek",
                 content=response.choices[0].message.content
             )
             db.add(question)

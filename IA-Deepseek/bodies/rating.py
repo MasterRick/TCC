@@ -8,6 +8,7 @@ from bodies.question import QuestionOut
 class RatingBase(BaseModel):
     question: int
     score: int
+    comment: str
 
 class RatingCreate(RatingBase):
     pass
@@ -15,8 +16,6 @@ class RatingCreate(RatingBase):
 
 class RatingOut(BaseModel):
     id: int
-    user: UserOut
-    question: QuestionOut
     created_at: datetime
     updated_at: datetime
     deleted_at: Optional[datetime] = None

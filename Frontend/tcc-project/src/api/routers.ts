@@ -21,8 +21,8 @@ export const loginApi = async (email: string, password: string) => {
         })
 }
 
-export const getQuestions = async (page: number, discipline: "MAT" | "POR" | undefined = undefined, classroom: "EF" | "EM" | undefined = undefined, year: "5ANO" | "9ANO" | "3ANO" | undefined = undefined, descriptor_id: number | undefined = undefined) => {
-    return api.get(`/questions?page=${page}` + `${discipline ? `&discipline=${discipline}` : ''}` + `${classroom ? `&classroom=${classroom}` : ''}` + `${year ? `&year=${year}` : ''}` + (descriptor_id ? `&descriptor_id=${descriptor_id}` : ''), {
+export const getQuestions = async (page: number, discipline: "MAT" | "POR" | undefined = undefined, classroom: "EF" | "EM" | undefined = undefined, year: "5ANO" | "9ANO" | "3ANO" | undefined = undefined, difficulty: 0 | 1 | 2 | undefined = undefined, descriptor_id: number | undefined = undefined) => {
+    return api.get(`/questions?page=${page}` + `${discipline ? `&discipline=${discipline}` : ''}` + `${classroom ? `&classroom=${classroom}` : ''}` + `${year ? `&year=${year}` : ''}` + (difficulty !== undefined ? `&difficulty=${difficulty}` : '') + (descriptor_id ? `&descriptor_id=${descriptor_id}` : ''), {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${useAuthStore().token}`
@@ -49,6 +49,21 @@ export const getAllDescriptors = async (page: number) => {
         return response.data
     }).catch((error) => {
         console.error('Failed to fetch descriptors:', error)
+        throw error
+    }
+    )
+}
+
+export const setRating = async (question: number, score: number, comment: string) => {
+    return api.post(`/ratings`, { question, score, comment }, {
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${useAuthStore().token}`
+        }
+    }).then((response) => {
+        return response.data
+    }).catch((error) => {
+        console.error('Failed to set rating:', error)
         throw error
     }
     )

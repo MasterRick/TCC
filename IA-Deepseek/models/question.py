@@ -13,6 +13,8 @@ class Question(Base):
     descriptor_id = Column(Integer, ForeignKey("descriptors.id"), nullable=False)
     descriptor = relationship("Descriptor", backref="questions")
 
+    source = Column(String(255), nullable=False)
+
     created_at = Column(DateTime, default=dt.datetime.now(dt.timezone.utc))
     updated_at = Column(DateTime, default=dt.datetime.now(dt.timezone.utc), onupdate=dt.datetime.now(dt.timezone.utc))
     deleted_at = Column(DateTime, nullable=True)

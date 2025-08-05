@@ -14,7 +14,7 @@ DB_NAME = os.getenv("DB_NAME")
 
 senha_codificada = quote_plus(DB_PASSWORD)
 
-DATABASE_URL = f"mysql+pymysql://root:{senha_codificada}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+DATABASE_URL = f"mysql+pymysql://admin:{senha_codificada}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 engine = create_engine(DATABASE_URL, echo=True)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()

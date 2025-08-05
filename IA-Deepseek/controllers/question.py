@@ -21,7 +21,7 @@ def get_questions(
     year: Optional[str] = Query(None, min_length=4, max_length=6)
 ):
     try:
-        return question_service.get_questions_service(db, page, descriptor_id, difficulty, discipline, classroom, year)
+        return question_service.get_questions_service(db, current_user.get("id"), page, descriptor_id, difficulty, discipline, classroom, year)
     except HTTPException as e:
         raise e
 

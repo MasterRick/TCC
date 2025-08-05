@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Toolbar from '../components/Toolbar.vue'
 import { ref } from 'vue'
-import { getAllDescriptors, getQuestions } from '@/api/routers'
+import { getAllDescriptors, getQuestions, setRating } from '@/api/routers'
 import type { Descriptors, Questions } from '@/types'
 
 const questions = ref<Questions[]>([])
@@ -10,9 +10,10 @@ const disciplines = ref<string[]>(['Matemática', 'Português'])
 const classrooms = ref<string[]>(['Ensino Fundamental', 'Ensino Médio'])
 const years = ref<string[]>(['5º Ano', '9º Ano', '3º Ano'])
 const difficulties = ref<string[]>(['Fácil', 'Médio', 'Difícil'])
+const comment = ref<string>('')
 
 const selectedDescriptor = ref<Descriptors | null>(null)
-const selectedDificulty = ref<string | null>(null)
+const selectedDificulty = ref<string | null>('Fácil')
 const selectedDiscipline = ref<string | null>('Matemática')
 const selectedClassroom = ref<string | null>('Ensino Fundamental')
 const selectedYear = ref<string | null>('5º Ano')
@@ -45,9 +46,25 @@ const fetchQuestions = async () => {
             ? '3ANO'
             : undefined
 
+    const difficulty =
+      selectedDificulty.value === 'Fácil'
+        ? 0
+        : selectedDificulty.value === 'Médio'
+          ? 1
+          : selectedDificulty.value === 'Difícil'
+            ? 2
+            : undefined
+
     const descriptor_id = selectedDescriptor.value ? selectedDescriptor.value.id : undefined
 
-    questions.value = await getQuestions(page.value, discipline, classroom, year, descriptor_id)
+    questions.value = await getQuestions(
+      page.value,
+      discipline,
+      classroom,
+      year,
+      difficulty,
+      descriptor_id,
+    )
   } catch (error) {
     console.error('Error fetching questions:', error)
   }
@@ -61,25 +78,44 @@ const fetchDescriptors = async () => {
   }
 }
 
+const setQuestionRating = async (questionId: number, comment: string) => {
+  try {
+    await setRating(questionId, rating.value, comment)
+    console.log(`Rating for question ${questionId} set to ${rating.value}`)
+  } catch (error) {
+    console.error('Error setting question rating:', error)
+  }
+}
+
 const nextQuestion = () => {
   rating.value = 0
   if (currentQuestionIndex.value < questions.value.length - 1) {
-    console.log('Current Question Index:', currentQuestionIndex.value)
-    console.log('Total Questions:', questions.value.length)
+    setQuestionRating(questions.value[currentQuestionIndex.value].id, comment.value)
     currentQuestionIndex.value++
   } else {
     page.value++
     currentQuestionIndex.value = 0
     fetchQuestions()
   }
+  comment.value = ''
 }
 
 const onSelectDiscipline = (discipline: string | null) => {
   selectedDescriptor.value = null
+  page.value = 1
+  currentQuestionIndex.value = 0
+  fetchQuestions()
+}
+
+const onSelectDificulty = (dificulty: string | null) => {
+  page.value = 1
+  currentQuestionIndex.value = 0
   fetchQuestions()
 }
 
 const onSelectClassroom = (classroom: string | null) => {
+  page.value = 1
+  currentQuestionIndex.value = 0
   selectedYear.value = null
   selectedDescriptor.value = null
   years.value = selectedClassroom.value === 'Ensino Fundamental' ? ['5º Ano', '9º Ano'] : ['3º Ano']
@@ -87,11 +123,15 @@ const onSelectClassroom = (classroom: string | null) => {
 }
 
 const onSelectYear = (year: string | null) => {
+  page.value = 1
+  currentQuestionIndex.value = 0
   selectedDescriptor.value = null
   fetchQuestions()
 }
 
 const onSelectDescriptor = (descriptor: Descriptors | null) => {
+  page.value = 1
+  currentQuestionIndex.value = 0
   selectedDescriptor.value = descriptor
   fetchQuestions()
 }
@@ -142,7 +182,13 @@ fetchDescriptors()
         </v-select>
       </v-col>
       <v-col>
-        <v-select v-model="selectedDificulty" label="Dificuldade" :items="difficulties"></v-select>
+        <v-select
+          clearable
+          v-model="selectedDificulty"
+          label="Dificuldade"
+          :items="difficulties"
+          @update:model-value="onSelectDificulty"
+        ></v-select>
       </v-col>
       <v-col>
         <v-select
@@ -247,6 +293,7 @@ fetchDescriptors()
       <v-row>
         <v-col>
           <v-textarea
+            v-model="comment"
             label="Comentário"
             rows="4"
             placeholder="Escreva seu comentário aqui..."

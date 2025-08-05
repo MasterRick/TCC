@@ -3,23 +3,42 @@ from fastapi import HTTPException
 from sqlalchemy.orm import Session
 from models.descriptor import Descriptor
 from models.question import Question
+from models.rating import Rating
 
 PAGE_SIZE = 20
 
-def get_questions_service(db: Session, page: int = 1, descriptor_id: Optional[int] = None, difficulty: Optional[int] = None, discipline: Optional[str] = None, classroom: Optional[str] = None, year: Optional[str] = None):
+def get_questions_service(
+    db: Session,
+    user_id: int,
+    page: int = 1,
+    descriptor_id: Optional[int] = None,
+    difficulty: Optional[int] = None,
+    discipline: Optional[str] = None,
+    classroom: Optional[str] = None,
+    year: Optional[str] = None
+):
     offset = (page - 1) * PAGE_SIZE
 
-    questions = (
+    query = (
         db.query(Question)
         .join(Descriptor)
-        .filter(
-            (Descriptor.id == descriptor_id) if descriptor_id is not None else True,
-            (Question.difficulty == difficulty) if difficulty is not None else True,
-            (Descriptor.discipline == discipline) if discipline is not None else True,
-            (Descriptor.classroom == classroom) if classroom is not None else True,
-            (Descriptor.year == year) if year is not None else True
-        )
-        .order_by(Question.created_at.desc())
+        .outerjoin(Rating, (Rating.question_id == Question.id) & (Rating.user_id == user_id))
+        .filter(Rating.id.is_(None)) 
+    )
+
+    if descriptor_id is not None:
+        query = query.filter(Descriptor.id == descriptor_id)
+    if difficulty is not None:
+        query = query.filter(Question.difficulty == difficulty)
+    if discipline is not None:
+        query = query.filter(Descriptor.discipline == discipline)
+    if classroom is not None:
+        query = query.filter(Descriptor.classroom == classroom)
+    if year is not None:
+        query = query.filter(Descriptor.year == year)
+
+    questions = (
+        query.order_by(Question.created_at.desc())
         .offset(offset)
         .limit(PAGE_SIZE)
         .all()
