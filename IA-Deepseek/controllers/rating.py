@@ -8,7 +8,7 @@ from services import rating as rating_service
 
 router = APIRouter(prefix="/ratings", tags=["ratings"])
 
-@router.post("/", response_model=RatingOut)
+@router.post("", response_model=RatingOut)
 def create_rating(
     rating: RatingCreate,
     db: Session = Depends(get_db),

@@ -9,7 +9,7 @@ from services import descriptor as descriptor_service
 
 router = APIRouter(prefix="/descriptors", tags=["descriptors"])
 
-@router.get("/", response_model=list[DescriptorOut],)
+@router.get("", response_model=list[DescriptorOut],)
 def get_descriptors(db: Session = Depends(get_db), 
                     current_user: dict[str, int] = Depends(get_current_user), 
                     page: int = Query(1, ge=1)):

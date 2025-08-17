@@ -4,9 +4,15 @@ from models import user, descriptor, rating, question, type
 from fastapi import FastAPI
 from controllers import user as user_router, login as login_router, rating as rating_router, question as question_router, descriptor as descriptor_router
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.trustedhost import TrustedHostMiddleware
+
 
 Base.metadata.create_all(bind=engine)
 app = FastAPI()
+
+app.add_middleware(
+    TrustedHostMiddleware, allowed_hosts=["*"]
+)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],

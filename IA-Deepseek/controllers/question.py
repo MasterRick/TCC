@@ -9,7 +9,7 @@ from fastapi import HTTPException
 
 router = APIRouter(prefix="/questions", tags=["questions"])
 
-@router.get("/", response_model=list[QuestionOut])
+@router.get("", response_model=list[QuestionOut])
 def get_questions(
     db: Session = Depends(get_db),
     current_user: dict[str, int] = Depends(get_current_user),

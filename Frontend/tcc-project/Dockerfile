@@ -17,7 +17,7 @@ COPY entrypoint.sh /entrypoint.sh
 
 RUN chmod +x /entrypoint.sh
 
-ENV PORT=80
+ENV PORT=3001
 EXPOSE ${PORT}
 
 ENTRYPOINT ["/entrypoint.sh"]
