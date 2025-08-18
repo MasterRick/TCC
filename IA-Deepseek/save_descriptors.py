@@ -14,7 +14,7 @@ class SaveDescriptors:
         return descriptor
     
 if __name__ == "__main__":
-    descriptors_files_name = ["5ANO_EF_MAT.txt", "3ANO_EM_MAT.txt"]
+    descriptors_files_name = ["9ANO_EF_MAT.txt", "5ANO_EF_POR.txt", "9ANO_EF_POR.txt", "3ANO_EM_POR.txt"]
     db = SessionLocal()
     save_descriptors = SaveDescriptors(db)
 

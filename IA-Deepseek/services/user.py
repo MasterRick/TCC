@@ -16,7 +16,7 @@ def login_user_service(user: OAuth2PasswordRequestForm, db: Session) -> dict:
     if not db_user or not pwd_context.verify(user.password, db_user.password):
         raise HTTPException(status_code=400, detail="Invalid credentials")
 
-    access_token = create_access_token(data={"id": db_user.id})
+    access_token = create_access_token(data={"id": db_user.id, "type": db_user.type_id})
     return {"access_token": access_token, "token_type": "bearer"}
     
     

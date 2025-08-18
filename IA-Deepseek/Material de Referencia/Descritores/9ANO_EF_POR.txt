@@ -1,0 +1,21 @@
+D1 – Localizar informações explícitas em um texto.
+D2 – Estabelecer relações entre partes de um texto, identificando repetições ou substituições que contribuem para a continuidade dele.
+D3 – Inferir o sentido de uma palavra ou expressão.
+D4 – Inferir uma informação implícita em um texto.
+D5 – Interpretar texto com auxílio de material gráfico diverso (propagandas, quadrinhos, fotos etc.).
+D6 – Identificar o tema de um texto.
+D7 – Identificar a tese de um texto.
+D8 – Estabelecer relação entre a tese e os argumentos oferecidos para sustentá-la.
+D9 – Diferenciar as partes principais das secundárias em um texto.
+D10 – Identificar o conflito gerador do enredo e os elementos que constroem a narrativa.
+D11 – Estabelecer relação causa/consequência entre partes e elementos do texto.
+D12 – Identificar a finalidade de textos de diferentes gêneros.
+D13 – Identificar as marcas linguísticas que evidenciam o locutor e o interlocutor de um texto.
+D14 – Distinguir um fato da opinião relativa a esse fato.
+D15 – Estabelecer relações lógico-discursivas presentes no texto, marcadas por conjunções, advérbios etc.
+D16 – Identificar efeitos de ironia ou humor em textos variados.
+D17 – Reconhecer o efeito de sentido decorrente do uso da pontuação e de outras notações.
+D18 – Reconhecer o efeito de sentido decorrente da escolha de uma determinada palavra ou expressão.
+D19 – Reconhecer o efeito de sentido decorrente da exploração de recursos ortográficos e/ou morfossintáticos.
+D20 – Reconhecer diferentes formas de tratar uma informação na comparação de textos que abordam o mesmo tema, em função das condições em que ele foi produzido e daquelas em que será recebido.
+D21 – Reconhecer posições distintas entre duas ou mais opiniões relativas ao mesmo fato ou ao mesmo tema.

@@ -139,10 +139,10 @@ class CreateQuestions:
             print("\n❌ Processo cancelado pelo usuário.")
 
 if __name__ == "__main__":
-    descriptors_file_name = ["5ANO_EF_MAT.txt", "3ANO_EM_MAT.txt"]
+    descriptors_file_name = ["9ANO_EF_MAT.txt", "5ANO_EF_POR.txt", "9ANO_EF_POR.txt", "3ANO_EM_POR.txt"]
     create_questions = CreateQuestions()
 
-    for i in range(4):
+    for i in range(1):
         for file_name in descriptors_file_name:
             print(f"\nIniciando criação de questões para o arquivo: {file_name}")
             for difficulty in range(3):

@@ -15,7 +15,14 @@ DB_NAME = os.getenv("DB_NAME")
 senha_codificada = quote_plus(DB_PASSWORD)
 
 DATABASE_URL = f"mysql+pymysql://admin:{senha_codificada}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
-engine = create_engine(DATABASE_URL, echo=True)
+engine = create_engine(
+    DATABASE_URL,
+    echo=True,
+    pool_size=30,           # Número máximo de conexões no pool
+    max_overflow=30,        # Número máximo de conexões extras acima do pool_size
+    pool_timeout=120,        # Tempo máximo (segundos) para esperar por uma conexão
+    connect_args={"connect_timeout": 120}  # Timeout de conexão ao MySQL
+)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
