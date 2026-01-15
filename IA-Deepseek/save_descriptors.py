@@ -14,7 +14,7 @@ class SaveDescriptors:
         return descriptor
     
 if __name__ == "__main__":
-    descriptors_files_name = ["9ANO_EF_MAT.txt", "5ANO_EF_POR.txt", "9ANO_EF_POR.txt", "3ANO_EM_POR.txt"]
+    descriptors_files_name = ["9ANO_EF_MAT.txt","5ANO_EF_MAT.txt" ,"5ANO_EF_POR.txt", "9ANO_EF_POR.txt", "3ANO_EM_POR.txt", "3ANO_EM_MAT.txt"]
     db = SessionLocal()
     save_descriptors = SaveDescriptors(db)
 
@@ -26,11 +26,11 @@ if __name__ == "__main__":
 
         for descriptor in descriptor_list:
             descriptor_data = {
-                "name": descriptor.split("–")[0],
-                "content": descriptor.split("–")[1],
-                "year": descriptors_file_name.split("_")[0],
-                "classroom": descriptors_file_name.split("_")[1],
-                "discipline": descriptors_file_name.split("_")[2].split(".")[0]
+                "name": descriptor.split("–")[0].strip(),
+                "content": descriptor.split("–")[1].strip(),
+                "year": descriptors_file_name.split("_")[0].strip(),
+                "classroom": descriptors_file_name.split("_")[1].strip(),
+                "discipline": descriptors_file_name.split("_")[2].split(".")[0].strip()
             }
             saved_descriptor = save_descriptors.save(descriptor_data)
             print(f"Saved Descriptor ID: {saved_descriptor.id}")

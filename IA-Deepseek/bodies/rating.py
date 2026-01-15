@@ -7,8 +7,12 @@ from bodies.question import QuestionOut
 
 class RatingBase(BaseModel):
     question: int
-    score: int
-    comment: str
+    coherence: float
+    contextualization: float
+    difficulty_level: float
+    clarity: float
+    descriptor_alignment: float
+    comment: Optional[str] = None
 
 class RatingCreate(RatingBase):
     pass
@@ -16,6 +20,14 @@ class RatingCreate(RatingBase):
 
 class RatingOut(BaseModel):
     id: int
+    question_id: int
+    user_id: int
+    coherence: float
+    contextualization: float
+    difficulty_level: float
+    clarity: float
+    descriptor_alignment: float
+    comment: Optional[str] = None
     created_at: datetime
     updated_at: datetime
     deleted_at: Optional[datetime] = None

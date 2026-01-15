@@ -7,36 +7,39 @@
 ## Passos
 
 1. **Clone o repositório**
-    ```bash
-    git clone <URL-do-repositório>
-    cd IA-DEEPSEEK
-    ```
+
+   ```bash
+   git clone <URL-do-repositório>
+   cd IA-DEEPSEEK
+   ```
 
 2. **Crie o ambiente virtual**
-    ```bash
-    python -m venv IA-Deepseek
-    ```
+
+   ```bash
+   python -m venv venvfiles
+   ```
 
 3. **Ative o ambiente virtual**
 
-    - **Windows:**
-      ```bash
-      venv\Scripts\activate
-      ```
-    - **Linux/Mac:**
-      ```bash
-      source venv/bin/activate
-      ```
+   - **Windows:**
+     ```bash
+     venv\Scripts\activate
+     ```
+   - **Linux/Mac:**
+     ```bash
+     source venv/bin/activate
+     ```
 
 4. **Instale as dependências**
-    ```bash
-    pip install -r requirements.txt
-    ```
+
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 5. **Execute a aplicação**
-    ```bash
-    python main.py
-    ```
+   ```bash
+   python main.py
+   ```
 
 ## Observações
 

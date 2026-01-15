@@ -75,8 +75,8 @@ class CreateQuestions:
             )
             
             descriptor_data = {
-                "name": descriptor.split("–")[0],
-                "content": descriptor.split("–")[1],
+                "name": descriptor.split("–")[0].strip(),
+                "content": descriptor.split("–")[1].strip(),
             }
 
             descriptor = db.query(Descriptor).filter(Descriptor.name == descriptor_data["name"], Descriptor.content == descriptor_data["content"]).first()

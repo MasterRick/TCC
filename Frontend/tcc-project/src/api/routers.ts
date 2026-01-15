@@ -54,8 +54,14 @@ export const getAllDescriptors = async (page: number) => {
     )
 }
 
-export const setRating = async (question: number, score: number, comment: string) => {
-    return api.post(`/ratings`, { question, score, comment }, {
+export const setRating = async (question: number, score: {
+    coherence: number,
+    contextualization: number,
+    difficulty_level: number,
+    clarity: number,
+    descriptor_alignment: number
+}, comment: string) => {
+    return api.post(`/ratings`, { question, ...score, comment }, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${useAuthStore().token}`
