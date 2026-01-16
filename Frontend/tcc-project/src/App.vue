@@ -1,11 +1,15 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
+import SystemMessages from './components/SystemMessages.vue'
+import GlobalLoading from './components/GlobalLoading.vue'
 import '@mdi/font/css/materialdesignicons.css'
 </script>
 
 <template>
   <v-container class="full-screen">
     <RouterView />
+    <SystemMessages />
+    <GlobalLoading />
   </v-container>
 </template>
 

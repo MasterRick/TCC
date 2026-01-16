@@ -32,6 +32,8 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { loginApi } from '@/api/routers'
+import { useLoadingStore } from '@/stores/loadingStore'
+const loadingStore = useLoadingStore()
 
 const email = ref('')
 const password = ref('')
@@ -48,6 +50,7 @@ const passwordRules = [
 ]
 
 const login = async () => {
+  loadingStore.showLoading('Entrando...')
   await formRef.value.validate().then((result: { valid: boolean }) => {
     if (result.valid) {
       loginApi(email.value, password.value)
@@ -56,6 +59,9 @@ const login = async () => {
         })
         .catch((error) => {
           console.error('Login failed:', error)
+        })
+        .finally(() => {
+          loadingStore.hideLoading()
         })
     }
   })

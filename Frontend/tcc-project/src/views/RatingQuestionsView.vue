@@ -1,24 +1,23 @@
 <script setup lang="ts">
 import Toolbar from '../components/Toolbar.vue'
+import QuestionFilters from '../components/QuestionFilters.vue'
 import { ref } from 'vue'
-import { getAllDescriptors, getQuestions, setRating } from '@/api/routers'
+import { getQuestions, setRating } from '@/api/routers'
 import type { Descriptors, Questions } from '@/types'
-import { fi } from 'vuetify/locale'
+import { useLoadingStore } from '@/stores/loadingStore'
 
+const loadingStore = useLoadingStore()
 const questions = ref<Questions[]>([])
-const descriptors = ref<Descriptors[]>([])
-const disciplines = ref<string[]>(['Matemática', 'Português'])
-const classrooms = ref<string[]>(['Ensino Fundamental', 'Ensino Médio'])
-const years = ref<string[]>(['5º Ano', '9º Ano', '3º Ano'])
-const difficulties = ref<string[]>(['Fácil', 'Médio', 'Difícil'])
 const comment = ref<string>('')
-const isLoading = ref(false)
 
-const selectedDescriptor = ref<Descriptors | null>(null)
-const selectedDificulty = ref<string | null>('Fácil')
-const selectedDiscipline = ref<string | null>('Matemática')
-const selectedClassroom = ref<string | null>('Ensino Fundamental')
-const selectedYear = ref<string | null>('5º Ano')
+const filters = ref({
+  descriptor: null as Descriptors | null,
+  difficulty: 'Fácil' as string | null,
+  discipline: 'Matemática' as string | null,
+  classroom: 'Ensino Fundamental' as string | null,
+  year: '5º Ano' as string | null,
+})
+
 const currentQuestionIndex = ref(0)
 const page = ref(1)
 const showRatingDialog = ref(false)
@@ -31,41 +30,41 @@ const rating = ref({
 })
 
 const fetchQuestions = async () => {
-  isLoading.value = true
+  loadingStore.showLoading('Carregando questões...')
   try {
     const discipline =
-      selectedDiscipline.value === 'Matemática'
+      filters.value.discipline === 'Matemática'
         ? 'MAT'
-        : selectedDiscipline.value === 'Português'
+        : filters.value.discipline === 'Português'
           ? 'POR'
           : undefined
 
     const classroom =
-      selectedClassroom.value === 'Ensino Fundamental'
+      filters.value.classroom === 'Ensino Fundamental'
         ? 'EF'
-        : selectedClassroom.value === 'Ensino Médio'
+        : filters.value.classroom === 'Ensino Médio'
           ? 'EM'
           : undefined
 
     const year =
-      selectedYear.value === '5º Ano'
+      filters.value.year === '5º Ano'
         ? '5ANO'
-        : selectedYear.value === '9º Ano'
+        : filters.value.year === '9º Ano'
           ? '9ANO'
-          : selectedYear.value === '3º Ano'
+          : filters.value.year === '3º Ano'
             ? '3ANO'
             : undefined
 
     const difficulty =
-      selectedDificulty.value === 'Fácil'
+      filters.value.difficulty === 'Fácil'
         ? 0
-        : selectedDificulty.value === 'Médio'
+        : filters.value.difficulty === 'Médio'
           ? 1
-          : selectedDificulty.value === 'Difícil'
+          : filters.value.difficulty === 'Difícil'
             ? 2
             : undefined
 
-    const descriptor_id = selectedDescriptor.value ? selectedDescriptor.value.id : undefined
+    const descriptor_id = filters.value.descriptor ? filters.value.descriptor.id : undefined
 
     questions.value = await getQuestions(
       page.value,
@@ -78,16 +77,14 @@ const fetchQuestions = async () => {
   } catch (error) {
     console.error('Error fetching questions:', error)
   } finally {
-    isLoading.value = false
+    loadingStore.hideLoading()
   }
 }
 
-const fetchDescriptors = async () => {
-  try {
-    descriptors.value = await getAllDescriptors(1)
-  } catch (error) {
-    console.error('Error fetching descriptors:', error)
-  }
+const onFilterChange = () => {
+  page.value = 1
+  currentQuestionIndex.value = 0
+  fetchQuestions()
 }
 
 const setQuestionRating = async (questionId: number, comment: string) => {
@@ -126,52 +123,9 @@ const nextQuestion = () => {
   comment.value = ''
 }
 
-const onSelectDiscipline = () => {
-  selectedDescriptor.value = null
-  page.value = 1
-  currentQuestionIndex.value = 0
-  fetchQuestions()
-}
-
-const onSelectDificulty = () => {
-  page.value = 1
-  currentQuestionIndex.value = 0
-  fetchQuestions()
-}
-
-const onSelectClassroom = () => {
-  page.value = 1
-  currentQuestionIndex.value = 0
-  selectedYear.value = null
-  selectedDescriptor.value = null
-  years.value = selectedClassroom.value === 'Ensino Fundamental' ? ['5º Ano', '9º Ano'] : ['3º Ano']
-  fetchQuestions()
-}
-
-const onSelectYear = () => {
-  page.value = 1
-  currentQuestionIndex.value = 0
-  selectedDescriptor.value = null
-  fetchQuestions()
-}
-
-const onSelectDescriptor = (descriptor: Descriptors | null) => {
-  page.value = 1
-  currentQuestionIndex.value = 0
-  selectedDescriptor.value = descriptor
-  fetchQuestions()
-}
-
-function extractItemDescriptors(item: Descriptors) {
-  return {
-    title: item.name,
-    subtitle: item.content,
-  }
-}
-
-isLoading.value = true
-Promise.all([fetchDescriptors(), fetchQuestions()]).finally(() => {
-  isLoading.value = false
+loadingStore.showLoading('Carregando questões...')
+fetchQuestions().finally(() => {
+  loadingStore.hideLoading()
 })
 </script>
 
@@ -183,77 +137,9 @@ Promise.all([fetchDescriptors(), fetchQuestions()]).finally(() => {
         <p class="text-center">Use o formulário abaixo para avaliar as questões.</p>
       </v-col>
     </v-row>
-    <v-row>
-      <v-col>
-        <v-select
-          clearable
-          label="Descritor"
-          :disabled="
-            selectedDiscipline === null || selectedClassroom === null || selectedYear === null
-          "
-          :item-props="extractItemDescriptors"
-          v-model="selectedDescriptor"
-          :items="
-            descriptors.filter((item) => {
-              const classroom = selectedClassroom === 'Ensino Fundamental' ? 'EF' : 'EM'
-              const discipline = selectedDiscipline === 'Matemática' ? 'MAT' : 'POR'
-              const year =
-                selectedYear === '5º Ano' ? '5ANO' : selectedYear === '9º Ano' ? '9ANO' : '3ANO'
 
-              return (
-                item.discipline === discipline && item.classroom === classroom && item.year === year
-              )
-            })
-          "
-          @update:model-value="onSelectDescriptor"
-        >
-        </v-select>
-      </v-col>
-      <v-col>
-        <v-select
-          clearable
-          v-model="selectedDificulty"
-          label="Dificuldade"
-          :items="difficulties"
-          @update:model-value="onSelectDificulty"
-        ></v-select>
-      </v-col>
-      <v-col>
-        <v-select
-          clearable
-          v-model="selectedDiscipline"
-          label="Disciplina"
-          :items="disciplines"
-          @update:model-value="onSelectDiscipline"
-        ></v-select>
-      </v-col>
-      <v-col>
-        <v-select
-          clearable
-          v-model="selectedClassroom"
-          label="Turma"
-          :items="classrooms"
-          @update:model-value="onSelectClassroom"
-        ></v-select>
-      </v-col>
-      <v-col>
-        <v-select
-          clearable
-          v-model="selectedYear"
-          label="Ano"
-          :items="years"
-          @update:model-value="onSelectYear"
-        ></v-select>
-      </v-col>
-    </v-row>
-    <div v-if="isLoading">
-      <v-row>
-        <v-col class="text-center">
-          <v-progress-circular indeterminate color="primary" size="64"></v-progress-circular>
-        </v-col>
-      </v-row>
-    </div>
-    <div v-else>
+    <QuestionFilters v-model="filters" @filter-change="onFilterChange" />
+    <div>
       <div style="" v-if="questions.length > 0">
         <v-row>
           <v-col>
