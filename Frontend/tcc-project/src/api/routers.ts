@@ -93,8 +93,12 @@ export const createQuestions = async () => {
 export const createQuestion = async (question: {
     content: string,
     difficulty: 0 | 1 | 2,
-    descriptor_id: number
+    descriptor_id: number | undefined
 }) => {
+    if (!question.descriptor_id) {
+        throw new Error('Descriptor ID is required to create a question.')
+    }
+
     return api.post(`/questions/create-single`, question, {
         headers: {
             'Content-Type': 'application/json',

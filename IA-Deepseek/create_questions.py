@@ -81,7 +81,7 @@ class CreateQuestions:
             """
 
             response = self.client.chat.completions.create(
-                model="deepseek-chat",
+                model="deepseek-reasoner",
                 messages=[
                     {"role": "system", "content": "Você é um assistente especializado em criar questões dissertativas."},
                     {"role": "user", "content": user_content}

@@ -2,6 +2,9 @@
 import { ref, watch } from 'vue'
 import { getAllDescriptors } from '@/api/routers'
 import type { Descriptors } from '@/types'
+import { useLoadingStore } from '@/stores/loadingStore'
+
+const loadingStore = useLoadingStore()
 
 interface FilterValues {
   descriptor: Descriptors | null
@@ -23,7 +26,7 @@ const emit = defineEmits<{
 const descriptors = ref<Descriptors[]>([])
 const disciplines = ref<string[]>(['Matemática', 'Português'])
 const classrooms = ref<string[]>(['Ensino Fundamental', 'Ensino Médio'])
-const years = ref<string[]>(['5º Ano', '9º Ano', '3º Ano'])
+const years = ref<string[]>(['5º Ano', '9º Ano'])
 const difficulties = ref<string[]>(['Fácil', 'Médio', 'Difícil'])
 
 const localFilters = ref<FilterValues>({
@@ -35,10 +38,13 @@ const localFilters = ref<FilterValues>({
 })
 
 const fetchDescriptors = async () => {
+  loadingStore.showLoading('Carregando descritores...')
   try {
     descriptors.value = await getAllDescriptors(1)
   } catch (error) {
     console.error('Error fetching descriptors:', error)
+  } finally {
+    loadingStore.hideLoading()
   }
 }
 

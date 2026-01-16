@@ -4,11 +4,10 @@ import QuestionFilters from '../components/QuestionFilters.vue'
 import { ref } from 'vue'
 import { getQuestions, setRating } from '@/api/routers'
 import type { Descriptors, Questions } from '@/types'
-import { useLoadingStore } from '@/stores/loadingStore'
 
-const loadingStore = useLoadingStore()
 const questions = ref<Questions[]>([])
 const comment = ref<string>('')
+const isLoading = ref(false)
 
 const filters = ref({
   descriptor: null as Descriptors | null,
@@ -30,7 +29,7 @@ const rating = ref({
 })
 
 const fetchQuestions = async () => {
-  loadingStore.showLoading('Carregando questões...')
+  isLoading.value = true
   try {
     const discipline =
       filters.value.discipline === 'Matemática'
@@ -77,7 +76,7 @@ const fetchQuestions = async () => {
   } catch (error) {
     console.error('Error fetching questions:', error)
   } finally {
-    loadingStore.hideLoading()
+    isLoading.value = false
   }
 }
 
@@ -123,10 +122,7 @@ const nextQuestion = () => {
   comment.value = ''
 }
 
-loadingStore.showLoading('Carregando questões...')
-fetchQuestions().finally(() => {
-  loadingStore.hideLoading()
-})
+fetchQuestions()
 </script>
 
 <template>
@@ -139,7 +135,15 @@ fetchQuestions().finally(() => {
     </v-row>
 
     <QuestionFilters v-model="filters" @filter-change="onFilterChange" />
-    <div>
+    <div v-if="isLoading">
+      <v-row>
+        <v-col class="text-center">
+          <v-progress-circular indeterminate color="primary" size="64"></v-progress-circular>
+          <div class="mt-4 text-h6 text-style">Carregando questões...</div>
+        </v-col>
+      </v-row>
+    </div>
+    <div v-else>
       <div style="" v-if="questions.length > 0">
         <v-row>
           <v-col>
