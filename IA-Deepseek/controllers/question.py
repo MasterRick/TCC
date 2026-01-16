@@ -1,9 +1,9 @@
 from typing import Optional
-from fastapi import APIRouter, Depends, Query
+from fastapi import APIRouter, BackgroundTasks, Depends, Query
 from sqlalchemy.orm import Session
 from auth.dependencies import get_current_user
 from db import get_db
-from bodies.question import QuestionOut
+from bodies.question import QuestionCreate, QuestionOut
 from services import question as question_service
 from fastapi import HTTPException
 
@@ -25,6 +25,13 @@ def get_questions(
     except HTTPException as e:
         raise e
 
+@router.get("/create-status")
+def process_status(db: Session = Depends(get_db), 
+                   current_user: dict[str, int] = Depends(get_current_user), 
+                   ):
+
+    return question_service.get_process_status()
+
 @router.get("/{question_id}", response_model=QuestionOut)
 def get_question(
     question_id: int,
@@ -33,5 +40,24 @@ def get_question(
 ):
     try:
         return question_service.get_question_service(question_id, db)
+    except HTTPException as e:
+        raise e
+
+@router.post("/create", response_model=dict[str, str])
+def create_questions(background_tasks: BackgroundTasks,
+                     db: Session = Depends(get_db), 
+                     current_user: dict[str, int] = Depends(get_current_user),
+                     ):
+
+    return question_service.create_questions_service(db=db, current_user=current_user, background_tasks=background_tasks)
+
+@router.post("/create-single", response_model=dict[str, str])
+def create_single_question(
+    background_tasks: BackgroundTasks,
+    question_info:QuestionCreate,
+    ):
+
+    try:
+        return question_service.create_questions_service_single(question_info, background_tasks)
     except HTTPException as e:
         raise e

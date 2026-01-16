@@ -74,3 +74,52 @@ export const setRating = async (question: number, score: {
     }
     )
 }
+
+export const createQuestions = async () => {
+    return api.post(`/questions/create`, {}, {
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${useAuthStore().token}`
+        }
+    }).then((response) => {
+        return response.data
+    }).catch((error) => {
+        console.error('Failed to create questions:', error)
+        throw error
+    }
+    )
+}
+
+export const createQuestion = async (question: {
+    content: string,
+    difficulty: 0 | 1 | 2,
+    descriptor_id: number
+}) => {
+    return api.post(`/questions/create-single`, question, {
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${useAuthStore().token}`
+        }
+    }).then((response) => {
+        return response.data
+    }).catch((error) => {
+        console.error('Failed to create question:', error)
+        throw error
+    }
+    )
+}
+
+export const createQuestionsGetStatus = async () => {
+    return api.get(`/questions/create-status`, {
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${useAuthStore().token}`
+        }
+    }).then((response) => {
+        return response.data
+    }).catch((error) => {
+        console.error('Failed to get question creation status:', error)
+        throw error
+    }
+    )
+}

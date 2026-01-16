@@ -4,6 +4,7 @@ import NotFound from '../views/NotFoundView.vue'
 import LoginView from '../views/LoginView.vue'
 import CreateExamView from '../views/CreateExamView.vue'
 import RatingQuestionsView from '../views/RatingQuestionsView.vue'
+import CreateQuestionView from '../views/CreateQuestionView.vue'
 import { useAuthStore } from '@/stores/authStore'
 
 
@@ -26,6 +27,12 @@ const routers = createRouter({
       path: '/create',
       name: 'Criar Avaliação',
       component: CreateExamView,
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/createQuestion',
+      name: 'Criar Questão',
+      component: CreateQuestionView,
       meta: { requiresAuth: true },
     },
     {

@@ -22,8 +22,9 @@ def verify_token(token: str):
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
         print(f"Payload do token: {payload}")
         user_id: int = payload.get("id")
+        type: int = payload.get("type")
         if user_id is None:
             raise HTTPException(status_code=401, detail="Token inválido")
-        return {"id": user_id}
+        return {"id": user_id, "type": type}
     except JWTError:
         raise HTTPException(status_code=401, detail="Token inválido ou expirado")

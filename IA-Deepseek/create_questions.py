@@ -22,7 +22,7 @@ class CreateQuestions:
     def __init__(self):
         pass
 
-    def _create_question(self, descriptor, difficulty):
+    def _create_question(self, descriptor: str | int, difficulty:int, content:str=""):
         alternate = random.randint(0, 4)
         alternateStr = ""
 
@@ -37,15 +37,30 @@ class CreateQuestions:
         elif alternate == 4:
             alternateStr = "E"
 
-        
         db = SessionLocal()
         try:
+            if isinstance(descriptor, str): 
+                    descriptor_data = {
+                        "name": descriptor.split("–")[0].strip(),
+                        "content": descriptor.split("–")[1].strip(),
+                    }
+                    
+                    descriptor = db.query(Descriptor).filter(Descriptor.name == descriptor_data["name"], Descriptor.content == descriptor_data["content"]).first()
+                    print(f"Descritor: {descriptor}")
+                    
+                    if not descriptor:
+                        raise Exception(f"Erro ao buscar descritor: {descriptor_data}")
+            else:
+                descriptor = db.query(Descriptor).filter(Descriptor.id == descriptor).first()
+                if not descriptor:
+                    raise Exception(f"Erro ao buscar descritor com ID: {descriptor}")
+        
             user_content = f"""
-            Crie uma questão dissertativa para os descritor {descriptor}. 5 alternativas, sendo uma correta e quatro incorretas.
-            Dificuldade: {difficulty}, onde 0 é fácil, 1 é médio e 2 é difícil.
+            Crie uma questão dissertativa com esse contexto:{content} para o tema {descriptor.content} na disciplina {"Matemática" if descriptor.discipline == "MAT" else "Português"} para um aluno do {descriptor.year} do {"Ensino Fundamental" if descriptor.classroom == "EF" else "Ensino Médio"}. 5 alternativas, sendo uma correta e quatro incorretas.
+            Dificuldade: {difficulty}, onde 0 é fácil, 1 é médio e 2 é difícil. .
             Siga o modelo abaixo para criar questão dissertativa:
             Ao iniciar a questão, coloque "INICIO" para indicar o início da questão.
-            1. Questão: Crie uma questão dissertativa com base no descritor.
+            1. Questão: Crie uma questão dissertativa com base no tema.
             FIM-QUESTÃO
             2. Alternativas: Crie as 5 alternativas da questão, sendo uma correta e quatro incorretas.
             A. Alternativa A
@@ -54,7 +69,7 @@ class CreateQuestions:
             D. Alternativa D
             E. Alternativa E
             FIM-ALTERNATIVAS
-            3. Resposta correta: Coloque a letra da alternativa correta como {alternateStr}.
+            3. Coloque a alternativa correta como {alternateStr}.
             Resposta correta: {alternateStr}
             FIM-RESPOSTA
             4. Justificativa: Justifique a resposta correta de forma resumida.
@@ -74,17 +89,8 @@ class CreateQuestions:
                 stream=False
             )
             
-            descriptor_data = {
-                "name": descriptor.split("–")[0].strip(),
-                "content": descriptor.split("–")[1].strip(),
-            }
-
-            descriptor = db.query(Descriptor).filter(Descriptor.name == descriptor_data["name"], Descriptor.content == descriptor_data["content"]).first()
-            print(f"Descritor: {descriptor}")
-
-            if not descriptor:
-                raise Exception(f"Erro ao buscar descritor: {descriptor_data}")
-
+            print(user_content)
+            
             question = Question(
                 descriptor=descriptor,
                 difficulty=difficulty,
@@ -112,6 +118,9 @@ class CreateQuestions:
                     print(f"[CONCLUÍDO] Questão para o {descriptor} gerada em {elapsed_time:.2f} segundos.")  
         except Exception as e:
             print(f"Erro ao processar o descritor: {e}")
+
+    def create_question(self, descriptor:str | int, difficulty:int, content:str=""):
+        return self._create_question(descriptor, difficulty, content=content)
 
     def create_questions(self, total_start = time.time(), descriptors_file_name = "3ANO_EM_MAT.txt", difficulty=0):
         try:

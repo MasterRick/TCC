@@ -1,9 +1,13 @@
 from typing import Optional
 from fastapi import HTTPException
 from sqlalchemy.orm import Session
+from bodies.question import QuestionCreate
 from models.descriptor import Descriptor
 from models.question import Question
 from models.rating import Rating
+from create_questions import CreateQuestions
+from fastapi import BackgroundTasks
+from db import get_db
 
 PAGE_SIZE = 20
 
@@ -86,3 +90,76 @@ def question_format(content: str):
         "answer": answer,
         "justification": justification
     }
+
+process_status = {"running": False, "current_file": None, "current_difficulty": None, "current_descriptor": None, "current_content": None}
+
+def process_questions(descriptors_file_name):
+    global process_status
+    process_status["running"] = True
+    try:
+        for file_name in descriptors_file_name:
+            process_status["current_file"] = file_name
+            print(f"\nIniciando criação de questões para o arquivo: {file_name}")
+            for difficulty in range(3):
+                process_status["current_difficulty"] = difficulty
+                print(f"Gerando questões com dificuldade {difficulty}...")
+                create_questions = CreateQuestions()
+                create_questions.create_questions(descriptors_file_name=file_name, difficulty=difficulty)
+    finally:
+        process_status["running"] = False
+        process_status["current_file"] = None
+        process_status["current_difficulty"] = None
+
+def process_question(descriptor_id: int, difficulty: int, content: str):
+    global process_status
+    process_status["running"] = True
+    try:
+        process_status["current_file"] = "Single Question"
+        process_status["current_difficulty"] = difficulty
+        process_status["current_descriptor"] = descriptor_id
+        process_status["current_content"] = content
+
+        print(f"\nIniciando criação de questão para o descritor: {descriptor_id} com dificuldade {difficulty}")
+    
+        create_questions = CreateQuestions()
+        create_questions.create_question(descriptor_id, difficulty, content)
+
+    finally:
+        process_status["running"] = False
+        process_status["current_file"] = None
+        process_status["current_difficulty"] = None
+        process_status["current_descriptor"] = None
+        process_status["current_content"] = None
+
+def create_questions_service(
+    db: Session,
+    current_user: dict[str, int],
+    background_tasks: BackgroundTasks,
+):
+    print(current_user)
+    if current_user.get("type") != 1:
+        raise HTTPException(status_code=403, detail="Acesso negado. Usuário não é administrador.")
+
+    descriptors_file_name = [
+        "5ANO_EF_MAT.txt", "9ANO_EF_MAT.txt", "3ANO_EM_MAT.txt",
+        "5ANO_EF_POR.txt", "9ANO_EF_POR.txt", "3ANO_EM_POR.txt"
+    ]
+    
+    if process_status["running"]:
+        raise HTTPException(status_code=400, detail="Processo de criação de questões já está em execução.")
+    else:
+        background_tasks.add_task(process_questions, descriptors_file_name)
+        return {"detail": "Processo de criação de questões iniciado."}
+
+def create_questions_service_single(
+    question_info:QuestionCreate,
+    background_tasks: BackgroundTasks,
+):
+     if process_status["running"]:
+        raise HTTPException(status_code=400, detail="Processo de criação de questões já está em execução.")
+     else:
+        background_tasks.add_task(process_question, question_info.descriptor_id, question_info.difficulty, question_info.content)
+        return {"detail": "Processo de criação de questão iniciado."}
+
+def get_process_status():
+    return process_status

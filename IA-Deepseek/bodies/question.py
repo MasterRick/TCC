@@ -14,3 +14,8 @@ class QuestionOut(BaseModel):
 
     class Config:
         from_attributes = True
+
+class QuestionCreate(BaseModel):
+    difficulty: int
+    content: str
+    descriptor_id: int

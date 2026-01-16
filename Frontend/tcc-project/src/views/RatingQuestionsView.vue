@@ -3,6 +3,7 @@ import Toolbar from '../components/Toolbar.vue'
 import { ref } from 'vue'
 import { getAllDescriptors, getQuestions, setRating } from '@/api/routers'
 import type { Descriptors, Questions } from '@/types'
+import { fi } from 'vuetify/locale'
 
 const questions = ref<Questions[]>([])
 const descriptors = ref<Descriptors[]>([])
@@ -125,20 +126,20 @@ const nextQuestion = () => {
   comment.value = ''
 }
 
-const onSelectDiscipline = (discipline: string | null) => {
+const onSelectDiscipline = () => {
   selectedDescriptor.value = null
   page.value = 1
   currentQuestionIndex.value = 0
   fetchQuestions()
 }
 
-const onSelectDificulty = (dificulty: string | null) => {
+const onSelectDificulty = () => {
   page.value = 1
   currentQuestionIndex.value = 0
   fetchQuestions()
 }
 
-const onSelectClassroom = (classroom: string | null) => {
+const onSelectClassroom = () => {
   page.value = 1
   currentQuestionIndex.value = 0
   selectedYear.value = null
@@ -147,7 +148,7 @@ const onSelectClassroom = (classroom: string | null) => {
   fetchQuestions()
 }
 
-const onSelectYear = (year: string | null) => {
+const onSelectYear = () => {
   page.value = 1
   currentQuestionIndex.value = 0
   selectedDescriptor.value = null
@@ -168,8 +169,10 @@ function extractItemDescriptors(item: Descriptors) {
   }
 }
 
-fetchQuestions()
-fetchDescriptors()
+isLoading.value = true
+Promise.all([fetchDescriptors(), fetchQuestions()]).finally(() => {
+  isLoading.value = false
+})
 </script>
 
 <template>
@@ -254,6 +257,7 @@ fetchDescriptors()
       <div style="" v-if="questions.length > 0">
         <v-row>
           <v-col>
+            <h2>Identificador da Questão: {{ questions[currentQuestionIndex]?.id }}</h2>
             <h2>
               Descritor:{{ questions[currentQuestionIndex]?.descriptor.name }} -
               {{ questions[currentQuestionIndex]?.descriptor.content }}
