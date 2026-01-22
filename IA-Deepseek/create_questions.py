@@ -73,7 +73,7 @@ class CreateQuestions:
             Resposta correta: {alternateStr}
             FIM-RESPOSTA
             4. Justificativa: Justifique a resposta correta de forma resumida.
-            Justificativa: A alternativa A é a correta porque...
+            Justificativa: A alternativa {alternateStr} é a correta porque...
             FIM-JUSTIFICATIVA
             Não coloque nada em negrito ou itálico.
             Ao finalizar a questão, coloque "FIM" para indicar o fim da questão.

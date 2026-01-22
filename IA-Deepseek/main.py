@@ -2,7 +2,7 @@
 from db import Base, engine
 from models import user, descriptor, rating, question, type
 from fastapi import FastAPI
-from controllers import user as user_router, login as login_router, rating as rating_router, question as question_router, descriptor as descriptor_router
+from controllers import user as user_router, login as login_router, rating as rating_router, question as question_router, descriptor as descriptor_router, exam as exam_router
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.trustedhost import TrustedHostMiddleware
 
@@ -25,3 +25,4 @@ app.include_router(login_router.router)
 app.include_router(rating_router.router)
 app.include_router(question_router.router)
 app.include_router(descriptor_router.router)
+app.include_router(exam_router.router)
