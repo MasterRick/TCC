@@ -17,7 +17,7 @@ export const loginApi = async (email: string, password: string) => {
             useAuthStore().login(response.data.access_token)
         })
         .catch((error) => {
-            console.error('Login failed:', error)
+            console.error('Falha no login:', error)
         })
 }
 
@@ -32,9 +32,24 @@ export const getQuestions = async (page: number, discipline: "MAT" | "POR" | und
     }) => {
         return response.data
     }).catch((error) => {
-        console.error('Failed to fetch questions:', error)
+        console.error('Falha ao buscar questões:', error)
         throw error
     })
+}
+
+export const getQuestion = async (question_id: number) => {
+    return api.get(`/questions/${question_id}`, {
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${useAuthStore().token}`
+        }
+    }).then((response) => {
+        return response.data
+    }).catch((error) => {
+        console.error('Falha ao buscar questão:', error)
+        throw error
+    }
+    )
 }
 
 export const getAllDescriptors = async (page: number) => {
@@ -48,7 +63,7 @@ export const getAllDescriptors = async (page: number) => {
     }) => {
         return response.data
     }).catch((error) => {
-        console.error('Failed to fetch descriptors:', error)
+        console.error('Falha ao buscar descritores:', error)
         throw error
     }
     )
@@ -69,14 +84,20 @@ export const setRating = async (question: number, score: {
     }).then((response) => {
         return response.data
     }).catch((error) => {
-        console.error('Failed to set rating:', error)
+        console.error('Falha ao salvar avaliação:', error)
         throw error
     }
     )
 }
 
-export const createQuestions = async () => {
-    return api.post(`/questions/create`, {}, {
+export const createQuestions = async (difficulty: number, discipline: string, classroom: string, year: string, content: string) => {
+    return api.post(`/questions/create`, {
+        difficulty,
+        discipline,
+        classroom,
+        year,
+        content
+    }, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${useAuthStore().token}`
@@ -84,7 +105,7 @@ export const createQuestions = async () => {
     }).then((response) => {
         return response.data
     }).catch((error) => {
-        console.error('Failed to create questions:', error)
+        console.error('Falha ao criar questões:', error)
         throw error
     }
     )
@@ -96,7 +117,7 @@ export const createQuestion = async (question: {
     descriptor_id: number | undefined
 }) => {
     if (!question.descriptor_id) {
-        throw new Error('Descriptor ID is required to create a question.')
+        throw new Error('O ID do descritor é obrigatório para criar uma questão.')
     }
 
     return api.post(`/questions/create-single`, question, {
@@ -107,7 +128,7 @@ export const createQuestion = async (question: {
     }).then((response) => {
         return response.data
     }).catch((error) => {
-        console.error('Failed to create question:', error)
+        console.error('Falha ao criar questão:', error)
         throw error
     }
     )
@@ -122,8 +143,31 @@ export const createQuestionsGetStatus = async () => {
     }).then((response) => {
         return response.data
     }).catch((error) => {
-        console.error('Failed to get question creation status:', error)
+        console.error('Falha ao obter status de criação de questões:', error)
         throw error
     }
     )
+}
+
+
+export const getQuestionsForExam = async (
+    difficulty: 0 | 1 | 2,
+    discipline: 'MAT' | 'POR',
+    classroom: 'EF' | 'EM',
+    year: '5ANO' | '9ANO' | '3ANO'
+) => {
+    return api.get(`/exam/questions/${difficulty}/${discipline}/${classroom}/${year}`, {
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${useAuthStore().token}`
+        }
+    }).then((response: {
+        data: Question[]
+    }) => {
+        console.log('Questões para avaliação buscadas:', response.data)
+        return response.data
+    }).catch((error) => {
+        console.error('Falha ao buscar questões para avaliação:', error)
+        throw error
+    })
 }

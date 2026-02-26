@@ -6,7 +6,7 @@
           <v-text-field
             v-model="email"
             :rules="emailRules"
-            label="Email"
+            label="E-mail"
             type="email"
             required
             prepend-icon="mdi-email"
@@ -14,13 +14,13 @@
           <v-text-field
             v-model="password"
             :rules="passwordRules"
-            label="Password"
+            label="Senha"
             type="password"
             required
             prepend-icon="mdi-lock"
           ></v-text-field>
           <div class="d-flex flex-column">
-            <v-btn class="mt-4" color="primary" block type="submit"> Login </v-btn>
+            <v-btn class="mt-4" color="primary" block type="submit"> Entrar </v-btn>
           </div>
         </v-form>
       </v-card>
@@ -41,12 +41,12 @@ const formRef = ref()
 const router = useRouter()
 
 const emailRules = [
-  (v: string) => !!v || 'Email is required',
-  (v: string) => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+  (v: string) => !!v || 'E-mail é obrigatório',
+  (v: string) => /.+@.+\..+/.test(v) || 'E-mail deve ser válido',
 ]
 const passwordRules = [
-  (v: string) => !!v || 'Password is required',
-  (v: string) => v.length >= 6 || 'Password must be at least 6 characters',
+  (v: string) => !!v || 'Senha é obrigatória',
+  (v: string) => v.length >= 6 || 'Senha deve ter pelo menos 6 caracteres',
 ]
 
 const login = async () => {
@@ -58,7 +58,7 @@ const login = async () => {
           router.push({ name: 'Início' })
         })
         .catch((error) => {
-          console.error('Login failed:', error)
+          console.error('Falha no login:', error)
         })
         .finally(() => {
           loadingStore.hideLoading()

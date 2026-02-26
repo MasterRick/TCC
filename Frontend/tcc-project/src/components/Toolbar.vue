@@ -3,7 +3,7 @@
     <v-navigation-drawer v-model="drawer" app>
       <v-list>
         <v-list-item>
-          <v-list-item-title class="text-h6">Meu App</v-list-item-title>
+          <v-list-item-title class="text-h6">Minha Aplicação</v-list-item-title>
         </v-list-item>
         <v-divider></v-divider>
 

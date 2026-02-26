@@ -15,7 +15,7 @@ api.interceptors.response.use(
             // Desloga o usuário quando receber 401
             const authStore = useAuthStore()
             authStore.logout()
-            messageStore.showError('Sessão expirada. Por favor, faça login novamente.')
+            messageStore.showError('Sessão expirada. Por favor, entre novamente.')
 
             // Redireciona para a página de login se necessário
             if (window.location.pathname !== '/login') {

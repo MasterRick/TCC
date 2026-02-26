@@ -2,9 +2,9 @@
 import { ref, watch } from 'vue'
 import { getAllDescriptors } from '@/api/routers'
 import type { Descriptors } from '@/types'
-import { useLoadingStore } from '@/stores/loadingStore'
+/*import { useLoadingStore } from '@/stores/loadingStore'
 
-const loadingStore = useLoadingStore()
+const loadingStore = useLoadingStore()*/
 
 interface FilterValues {
   descriptor: Descriptors | null
@@ -38,13 +38,13 @@ const localFilters = ref<FilterValues>({
 })
 
 const fetchDescriptors = async () => {
-  loadingStore.showLoading('Carregando descritores...')
+  /*loadingStore.showLoading('Carregando descritores...')*/
   try {
     descriptors.value = await getAllDescriptors(1)
   } catch (error) {
-    console.error('Error fetching descriptors:', error)
+    console.error('Erro ao buscar descritores:', error)
   } finally {
-    loadingStore.hideLoading()
+    /*loadingStore.hideLoading()*/
   }
 }
 

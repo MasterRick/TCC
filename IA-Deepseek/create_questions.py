@@ -22,7 +22,7 @@ class CreateQuestions:
     def __init__(self):
         pass
 
-    def _create_question(self, descriptor: str | int, difficulty:int, content:str=""):
+    def _create_question(self, descriptor: str | int, difficulty:int, content:str="", classroom:str="", discipline:str="", year:str=""):
         alternate = random.randint(0, 4)
         alternateStr = ""
 
@@ -43,9 +43,12 @@ class CreateQuestions:
                     descriptor_data = {
                         "name": descriptor.split("–")[0].strip(),
                         "content": descriptor.split("–")[1].strip(),
+                        "classroom": classroom,
+                        "discipline": discipline,
+                        "year": year
                     }
-                    
-                    descriptor = db.query(Descriptor).filter(Descriptor.name == descriptor_data["name"], Descriptor.content == descriptor_data["content"]).first()
+                    print(f"Dados do descritor: {descriptor_data}")
+                    descriptor = db.query(Descriptor).filter(Descriptor.name == descriptor_data["name"], Descriptor.content == descriptor_data["content"], Descriptor.classroom == descriptor_data["classroom"], Descriptor.discipline == descriptor_data["discipline"], Descriptor.year == descriptor_data["year"]).first()
                     print(f"Descritor: {descriptor}")
                     
                     if not descriptor:
@@ -108,12 +111,12 @@ class CreateQuestions:
             return None
        
 
-    def print_and_save_results(self, descriptor_list = [], difficulty=0):
+    def print_and_save_results(self, descriptor_list = [], difficulty=0, classroom="", discipline="", year="", content=""):
         try:
                 for index, descriptor in enumerate(descriptor_list, start=0):
                     print(f"\n[PROCESSANDO] Gerando questão para o {descriptor}")
                     start_time = time.time()
-                    self._create_question(descriptor, difficulty)
+                    self._create_question(descriptor, difficulty, classroom=classroom, discipline=discipline, year=year, content=content)
                     elapsed_time = time.time() - start_time
                     print(f"[CONCLUÍDO] Questão para o {descriptor} gerada em {elapsed_time:.2f} segundos.")  
         except Exception as e:
@@ -122,7 +125,7 @@ class CreateQuestions:
     def create_question(self, descriptor:str | int, difficulty:int, content:str=""):
         return self._create_question(descriptor, difficulty, content=content)
 
-    def create_questions(self, total_start = time.time(), descriptors_file_name = "3ANO_EM_MAT.txt", difficulty=0):
+    def create_questions(self, total_start = time.time(), descriptors_file_name = "", difficulty=0, content=""):
         try:
             try:
                 print("Iniciando processamento...")
@@ -137,7 +140,8 @@ class CreateQuestions:
                 print(f"\n❌ Erro de processamento: {e}")
 
             try:
-                create_questions.print_and_save_results(descriptor_list, difficulty=difficulty)
+                print(descriptors_file_name)
+                create_questions.print_and_save_results(descriptor_list, difficulty=difficulty, classroom=descriptors_file_name.split("_")[1].strip(), discipline=descriptors_file_name.split("_")[2].split(".")[0].strip(), year=descriptors_file_name.split("_")[0].strip(), content=content)
 
                 total_time = time.time() - total_start
                 print(f"\n✅ Processo finalizado! Tempo total: {total_time:.2f} segundos")

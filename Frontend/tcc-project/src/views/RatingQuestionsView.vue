@@ -74,7 +74,7 @@ const fetchQuestions = async () => {
       descriptor_id,
     )
   } catch (error) {
-    console.error('Error fetching questions:', error)
+    console.error('Erro ao buscar questões:', error)
   } finally {
     isLoading.value = false
   }
@@ -89,9 +89,9 @@ const onFilterChange = () => {
 const setQuestionRating = async (questionId: number, comment: string) => {
   try {
     await setRating(questionId, rating.value, comment)
-    console.log(`Rating for question ${questionId} set to`, rating.value)
+    console.log(`Avaliação da questão ${questionId} definida para`, rating.value)
   } catch (error) {
-    console.error('Error setting question rating:', error)
+    console.error('Erro ao salvar avaliação da questão:', error)
   }
 }
 

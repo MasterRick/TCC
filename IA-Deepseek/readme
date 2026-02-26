@@ -20,14 +20,13 @@
    ```
 
 3. **Ative o ambiente virtual**
-
    - **Windows:**
      ```bash
-     venv\Scripts\activate
+     .venv\Scripts\activate
      ```
    - **Linux/Mac:**
      ```bash
-     source venv/bin/activate
+     source .venv/bin/activate
      ```
 
 4. **Instale as dependências**
@@ -38,7 +37,7 @@
 
 5. **Execute a aplicação**
    ```bash
-   python main.py
+   uvicorn main:app --reload
    ```
 
 ## Observações

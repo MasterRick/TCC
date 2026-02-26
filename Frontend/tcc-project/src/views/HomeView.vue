@@ -7,7 +7,7 @@ import { menuItems } from '../utils/RouterOptions'
   <Toolbar>
     <v-row>
       <v-col>
-        <h1 class="text-center">Bem-vindo ao Meu App</h1>
+        <h1 class="text-center">Bem-vindo à Minha Aplicação</h1>
         <p class="text-center">Use o menu lateral para navegar entre as páginas.</p>
       </v-col>
     </v-row>

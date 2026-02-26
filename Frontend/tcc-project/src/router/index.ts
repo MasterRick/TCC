@@ -19,7 +19,7 @@ const routers = createRouter({
     },
     {
       path: '/login',
-      name: 'Login',
+      name: 'Entrar',
       component: LoginView,
       meta: { requiresAuth: false },
     },
@@ -53,8 +53,8 @@ routers.beforeEach((to, from, next) => {
   const auth = useAuthStore()
 
   if (to.meta.requiresAuth && !auth.isAuthenticated) {
-    next({ name: 'Login' })
-  } else if (to.name === 'Login' && auth.isAuthenticated) {
+    next({ name: 'Entrar' })
+  } else if (to.name === 'Entrar' && auth.isAuthenticated) {
     next({ name: 'Início' })
   } else {
     next()

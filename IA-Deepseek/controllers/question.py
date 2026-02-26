@@ -3,7 +3,7 @@ from fastapi import APIRouter, BackgroundTasks, Depends, Query
 from sqlalchemy.orm import Session
 from auth.dependencies import get_current_user
 from db import get_db
-from bodies.question import QuestionCreate, QuestionOut
+from bodies.question import QuestionByFileCreate, QuestionCreate, QuestionOut
 from services import question as question_service
 from fastapi import HTTPException
 
@@ -44,12 +44,13 @@ def get_question(
         raise e
 
 @router.post("/create", response_model=dict[str, str])
-def create_questions(background_tasks: BackgroundTasks,
+def create_questions(question_info:QuestionByFileCreate,
+                     background_tasks: BackgroundTasks,
                      db: Session = Depends(get_db), 
                      current_user: dict[str, int] = Depends(get_current_user),
                      ):
 
-    return question_service.create_questions_service(db=db, current_user=current_user, background_tasks=background_tasks)
+    return question_service.create_questions_service(db=db, current_user=current_user, background_tasks=background_tasks, question_info=question_info)
 
 @router.post("/create-single", response_model=dict[str, str])
 def create_single_question(

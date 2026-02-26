@@ -7,7 +7,7 @@ export type Questions = {
         answer: string
         justification: string
     }
-
+    rating?: number
     descriptor: Descriptors
 }
 
