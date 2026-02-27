@@ -59,7 +59,7 @@ class CreateQuestions:
                     raise Exception(f"Erro ao buscar descritor com ID: {descriptor}")
         
             user_content = f"""
-            Crie uma questão dissertativa com esse contexto:{content} para o tema {descriptor.content} na disciplina {"Matemática" if descriptor.discipline == "MAT" else "Português"} para um aluno do {descriptor.year} do {"Ensino Fundamental" if descriptor.classroom == "EF" else "Ensino Médio"}. 5 alternativas, sendo uma correta e quatro incorretas.
+            Crie uma questão dissertativa com esse contexto:{content} para o tema {descriptor.content} na disciplina {"Matemática" if descriptor.discipline == "MAT" else "Português"} para um aluno do {descriptor.year} do {"Ensino Fundamental" if descriptor.classroom == "EF" else "Ensino Médio"}. 5 alternativas, sendo uma correta (Alternativa {alternateStr}) e quatro incorretas.
             Dificuldade: {difficulty}, onde 0 é fácil, 1 é médio e 2 é difícil. .
             Siga o modelo abaixo para criar questão dissertativa:
             Ao iniciar a questão, coloque "INICIO" para indicar o início da questão.
