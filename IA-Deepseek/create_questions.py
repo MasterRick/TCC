@@ -60,12 +60,12 @@ class CreateQuestions:
         
             user_content = f"""
             Crie uma questão dissertativa com esse contexto:{content} para o tema {descriptor.content} na disciplina {"Matemática" if descriptor.discipline == "MAT" else "Português"} para um aluno do {descriptor.year} do {"Ensino Fundamental" if descriptor.classroom == "EF" else "Ensino Médio"}. 5 alternativas, sendo uma correta (Alternativa {alternateStr}) e quatro incorretas.
-            Dificuldade: {difficulty}, onde 0 é fácil, 1 é médio e 2 é difícil. .
+            Dificuldade: {difficulty}, onde 0 é fácil, 1 é médio e 2 é difícil.
             Siga o modelo abaixo para criar questão dissertativa:
             Ao iniciar a questão, coloque "INICIO" para indicar o início da questão.
             1. Questão: Crie uma questão dissertativa com base no tema.
             FIM-QUESTÃO
-            2. Alternativas: Crie as 5 alternativas da questão, sendo uma correta (Alternativa {alternateStr}) e quatro incorretas.
+            2. Alternativas:
             A. Alternativa A
             B. Alternativa B
             C. Alternativa C
