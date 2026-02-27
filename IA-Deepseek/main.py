@@ -21,8 +21,8 @@ app = FastAPI()
 
 env_path = Path('.') / '.env'
 load_dotenv(dotenv_path=env_path)
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "*").split(",")
-ALLOWED_ORIGINS = os.getenv("ALLOWED_ORIGINS", "*").split(",")
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS").split(",")
+ALLOWED_ORIGINS = os.getenv("ALLOWED_ORIGINS").split(",")
 RATE_LIMIT = int(os.getenv("RATE_LIMIT"))  # Requisições por minuto
 TIMEOUT_SECONDS = int(os.getenv("TIMEOUT_SECONDS"))  # Tempo limite para respostas
 RATE_LIMIT_WINDOW_SECONDS = int(os.getenv("RATE_LIMIT_WINDOW_SECONDS"))  # Janela de tempo para o rate limit
@@ -65,8 +65,8 @@ async def timeout_middleware(request: Request, call_next):
             status_code=504,
             content={"detail": f"Request timeout after {TIMEOUT_SECONDS} seconds"},
         )
-
-
+    
+    
 @app.middleware("http")
 async def rate_limit_middleware(request: Request, call_next):
     if RATE_LIMIT <= 0:

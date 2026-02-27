@@ -65,7 +65,7 @@ class CreateQuestions:
             Ao iniciar a questão, coloque "INICIO" para indicar o início da questão.
             1. Questão: Crie uma questão dissertativa com base no tema.
             FIM-QUESTÃO
-            2. Alternativas: Crie as 5 alternativas da questão, sendo uma correta e quatro incorretas.
+            2. Alternativas: Crie as 5 alternativas da questão, sendo uma correta (Alternativa {alternateStr}) e quatro incorretas.
             A. Alternativa A
             B. Alternativa B
             C. Alternativa C
@@ -75,8 +75,8 @@ class CreateQuestions:
             3. Coloque a alternativa correta como {alternateStr}.
             Resposta correta: {alternateStr}
             FIM-RESPOSTA
-            4. Justificativa: Justifique a resposta correta de forma resumida.
-            Justificativa: A alternativa {alternateStr} é a correta porque...
+            4. Justificativa:
+            A alternativa {alternateStr} é a correta porque...
             FIM-JUSTIFICATIVA
             Não coloque nada em negrito ou itálico.
             Ao finalizar a questão, coloque "FIM" para indicar o fim da questão.
