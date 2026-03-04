@@ -64,7 +64,7 @@ const getFilterCodes = () => {
     return null
   }
 
-  return { difficulty, discipline, classroom, year }
+  return { difficulty, discipline, classroom, year, descriptor: filters.value.descriptor }
 }
 
 const resetQuestionLists = () => {
@@ -83,6 +83,7 @@ const fetchQuestionsForExam = async () => {
   loadingStore.showLoading('Carregando questões...')
   try {
     const response = await getQuestionsForExam(
+      filterCodes.descriptor !== null ? filterCodes.descriptor.id : 0,
       filterCodes.difficulty,
       filterCodes.discipline,
       filterCodes.classroom,

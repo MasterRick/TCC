@@ -56,11 +56,11 @@ def get_best_or_random_question(db: Session, descriptor_id: int, difficulty: int
         if rated_questions:
             # Retorna a questão com melhor avaliação
             best_question_id = rated_questions[0][0]
-            print(f"Best question ID: {best_question_id} with average rating {rated_questions}")
+            #print(f"Best question ID: {best_question_id} with average rating {rated_questions}")
             best_question = db.query(Question).filter(Question.id == best_question_id).first()
-            print(f"Best question retrieved: ID {best_question.id} with content: {best_question.content}")
+            #print(f"Best question retrieved: ID {best_question.id} with content: {best_question.content}")
             if best_question:
-                print(f"Best question found: ID {best_question.id} with average rating {rated_questions[0][1]}")
+                #print(f"Best question found: ID {best_question.id} with average rating {rated_questions[0][1]}")
                 best_question.rating = rated_questions[0][1]  # Adiciona a média de avaliação à questão
                 return best_question 
         
@@ -81,10 +81,43 @@ def get_best_or_random_question(db: Session, descriptor_id: int, difficulty: int
     except Exception as e:
         return None
 
+def get_all_questions_for_descriptor(db: Session, descriptor_id: int, difficulty: int) -> list[tuple[int, float]]:
+    try:
+        rated_questions = (
+            db.query(
+                Question.id,
+                func.avg((
+                    Rating.coherence + 
+                    Rating.contextualization + 
+                    Rating.difficulty_level + 
+                    Rating.clarity + 
+                    Rating.descriptor_alignment
+                ) / 5).label('avg_rating')
+            )
+            .outerjoin(Rating, Question.id == Rating.question_id)
+            .filter(
+                Question.descriptor_id == descriptor_id,
+                Question.difficulty == difficulty
+            )
+            .group_by(Question.id)
+            .order_by(func.avg((
+                Rating.coherence + 
+                Rating.contextualization + 
+                Rating.difficulty_level + 
+                Rating.clarity + 
+                Rating.descriptor_alignment
+            ) / 5).desc())
+            .all()
+        )
+        print(f"Rated questions for descriptor {descriptor_id} and difficulty {difficulty}: {rated_questions}")
+        return rated_questions
+    except Exception as e:
+        return None
 
 def get_questions(
     db: Session,
     current_user: dict[str, int],
+    desc: str,
     difficulty: int,
     discipline: str,
     classroom: str,
@@ -92,6 +125,7 @@ def get_questions(
 ):
     exam: list[Question] = []
     descriptors = db.query(Descriptor).filter(
+        Descriptor.id == int(desc) if desc.isdigit() else Descriptor.id,
         Descriptor.discipline == discipline,
         Descriptor.classroom == classroom,
         Descriptor.year == year
@@ -100,15 +134,28 @@ def get_questions(
     if not descriptors:
         raise HTTPException(status_code=404, detail="No descriptors found for the given criteria")
 
-    for descriptor in descriptors:
-        question = get_best_or_random_question(
-            db, 
-            descriptor.id, 
-            difficulty
-        )
-        if question:
-            question.content = question_format(question.content)
-            exam.append(question)
-        else:
-            raise HTTPException(status_code=404, detail=f"No questions found for descriptor id {descriptor.id} with the given difficulty")  
+    if desc != "all":
+        questions = get_all_questions_for_descriptor(db, int(desc), difficulty)
+        print(f"Questions retrieved for descriptor {desc} and difficulty {difficulty}: {questions}")
+        if not questions:
+            raise HTTPException(status_code=404, detail=f"No questions found for descriptor id {desc} with the given difficulty")
+        for question_id, avg_rating in questions:
+                question = db.query(Question).filter(Question.id == question_id).first()
+                if question:
+                    question.rating = avg_rating  # Adiciona a média de avaliação à questão
+                    question.content = question_format(question.content)
+                    exam.append(question)
+        
+    else:
+        for descriptor in descriptors:
+            question = get_best_or_random_question(
+                db, 
+                descriptor.id, 
+                difficulty
+            )
+            if question:
+                question.content = question_format(question.content)
+                exam.append(question)
+            else:
+                raise HTTPException(status_code=404, detail=f"No questions found for descriptor id {descriptor.id} with the given difficulty")  
     return  exam

@@ -9,8 +9,9 @@ from services import exam as exam_service
 
 router = APIRouter(prefix="/exam", tags=["exam"])
 
-@router.get("/questions/{difficulty}/{discipline}/{classroom}/{year}", response_model=list[QuestionOut])
+@router.get("/questions/{desc}/{difficulty}/{discipline}/{classroom}/{year}", response_model=list[QuestionOut])
 def get_questions_for_exam(
+    desc: str,
     difficulty: int,
     discipline: str,
     classroom: str,
@@ -19,6 +20,6 @@ def get_questions_for_exam(
     current_user: dict[str, int] = Depends(get_current_user)
 ):
     try:
-        return exam_service.get_questions(db, current_user, difficulty, discipline, classroom, year)
+        return exam_service.get_questions(db, current_user, desc, difficulty, discipline, classroom, year)
     except HTTPException as e:
         raise e

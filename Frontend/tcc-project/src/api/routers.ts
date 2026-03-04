@@ -151,12 +151,13 @@ export const createQuestionsGetStatus = async () => {
 
 
 export const getQuestionsForExam = async (
+    desc: number,
     difficulty: 0 | 1 | 2,
     discipline: 'MAT' | 'POR',
     classroom: 'EF' | 'EM',
     year: '5ANO' | '9ANO' | '3ANO'
 ) => {
-    return api.get(`/exam/questions/${difficulty}/${discipline}/${classroom}/${year}`, {
+    return api.get(`/exam/questions/${desc !== 0 ? desc : 'all'}/${difficulty}/${discipline}/${classroom}/${year}`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${useAuthStore().token}`
